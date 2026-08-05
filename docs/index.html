@@ -271,8 +271,8 @@ function buildCard(grid, metric, seriesList, xLabels){
   const badge = latestPts.length ? pill(latestPts[0].rating) : '';
   const latestTxt=latestPts.map((p,i)=>seriesList[i].name+': <b>'+fmt(metric,p.y)+'</b>').join(' &nbsp; ');
   const tt=T[metric]||{};
-  const targetTxt = metric==='PerfScore' ? 'Google good \u2265 90'
-                  : (tt.good!=null ? 'Google good \u2264 '+fmtT(metric,tt.good) : '');
+  const targetTxt = metric==='PerfScore' ? 'Good \u2265 90'
+                  : (tt.good!=null ? 'Good \u2264 '+fmtT(metric,tt.good) : '');
   card.innerHTML='<h3><span>'+metric+'</span>'+badge+'</h3>'+(targetTxt?'<div class="target">'+targetTxt+'</div>':'')+'<div class="latest">'+(latestTxt||'&mdash;')+'</div><canvas></canvas>';
   grid.appendChild(card);
 
