@@ -1,1 +1,197 @@
-{"pulledOn": "not run yet", "rows": []}
+{
+  "pulledOn": "2026-08-05 09:17 UTC",
+  "rows": [
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "mobile",
+      "metric": "LCP",
+      "value": 38401,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "mobile",
+      "metric": "CLS",
+      "value": 0.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "mobile",
+      "metric": "TBT",
+      "value": 1266,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "mobile",
+      "metric": "FCP",
+      "value": 1951,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "mobile",
+      "metric": "SI",
+      "value": 23187,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "mobile",
+      "metric": "PerfScore",
+      "value": 39,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "desktop",
+      "metric": "LCP",
+      "value": 7648,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "desktop",
+      "metric": "CLS",
+      "value": 0.389,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "desktop",
+      "metric": "TBT",
+      "value": 315,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "desktop",
+      "metric": "FCP",
+      "value": 522,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "desktop",
+      "metric": "SI",
+      "value": 4943,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/",
+      "strategy": "desktop",
+      "metric": "PerfScore",
+      "value": 34,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "mobile",
+      "metric": "LCP",
+      "value": 13139,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "mobile",
+      "metric": "CLS",
+      "value": 0.008,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "mobile",
+      "metric": "TBT",
+      "value": 294,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "mobile",
+      "metric": "FCP",
+      "value": 2401,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "mobile",
+      "metric": "SI",
+      "value": 5573,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "mobile",
+      "metric": "PerfScore",
+      "value": 61,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "desktop",
+      "metric": "LCP",
+      "value": 2341,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "desktop",
+      "metric": "CLS",
+      "value": 0.001,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "desktop",
+      "metric": "TBT",
+      "value": 347,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "desktop",
+      "metric": "FCP",
+      "value": 631,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "desktop",
+      "metric": "SI",
+      "value": 1326,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-05",
+      "target": "https://www.indriya.com/rings",
+      "strategy": "desktop",
+      "metric": "PerfScore",
+      "value": 72,
+      "rating": "Needs Improvement"
+    }
+  ]
+}
