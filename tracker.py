@@ -29,27 +29,50 @@ import requests
 #   type 'origin' = the whole website (one combined number).
 #   type 'url'    = one specific page. Only works if the page gets enough traffic;
 #                   quiet pages return nothing (that is normal -- LAB still covers them).
+#   label / kind  = friendly name + page type, used only for display on the dashboard.
 #
 # IMPORTANT: the origin/url must EXACTLY match what real users load in the address
 # bar (www vs non-www, https). If field comes back empty, this is almost always why.
+#   FIELD only holds pages that actually have real-user data: the whole-site
+#   origin, the homepage, and busy category (PLP) pages. Product and store pages
+#   almost never clear CrUX's traffic threshold, so they are NOT in Field -- they
+#   live in Lab below, which works regardless of traffic. (If you add a PDP/store
+#   here it will simply come back empty; that is expected, not a bug.)
 FIELD_TARGETS = [
-    {"type": "origin", "value": "https://www.indriya.com"},
-    {"type": "url",    "value": "https://www.indriya.com/"},
-    {"type": "url",    "value": "https://www.indriya.com/rings"},
-    # add more specific pages here
+    # Whole site -- the complete-website number. Always has data. (Canonical is www.)
+    {"type": "origin", "value": "https://www.indriya.com",                  "label": "Whole site (all pages)", "kind": "Origin"},
+    # Homepage
+    {"type": "url",    "value": "https://www.indriya.com/",                 "label": "Homepage",               "kind": "Homepage"},
+    # PLP -- category listing pages (usually have field data)
+    {"type": "url",    "value": "https://www.indriya.com/jewellery/rings",    "label": "Rings (PLP)",     "kind": "PLP"},
+    {"type": "url",    "value": "https://www.indriya.com/jewellery/neckwear", "label": "Necklaces (PLP)", "kind": "PLP"},
 ]
 
 # LAB = a fresh speed test we trigger ourselves (the spike / early-regression detector).
 #   ANY publicly reachable URL works -- including a staging URL, BUT ONLY IF that
 #   staging URL opens in a normal browser with no login / no VPN.
+#   (No 'origin' here -- a lab test needs a real page URL, so Lab starts at the homepage.)
+#   This is the full page-type mix -- homepage + 2 PLP + 2 PDP + 2 store -- so the
+#   dashboard covers a complete picture. The PDP URLs below are real, verified
+#   product pages; if a product is ever discontinued its URL will 404 (the run log
+#   will show "HTTP 404" -- just swap in a fresh product URL from the live site).
 LAB_TARGETS = [
-    "https://www.indriya.com/",
-    "https://www.indriya.com/rings",
-    # "https://staging.indriya.com/",   # <- add ONLY if it opens with no login
+    {"value": "https://www.indriya.com/",                                                      "label": "Homepage",                  "kind": "Homepage"},
+    {"value": "https://www.indriya.com/jewellery/rings",                                       "label": "Rings (PLP)",               "kind": "PLP"},
+    {"value": "https://www.indriya.com/jewellery/neckwear",                                    "label": "Necklaces (PLP)",           "kind": "PLP"},
+    {"value": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713", "label": "Nakshatra Necklace (PDP)", "kind": "PDP"},
+    {"value": "https://www.indriya.com/jewellery-products/indu-diamond-necklace-deaya40-apns627",      "label": "Indu Necklace (PDP)",      "kind": "PDP"},
+    {"value": "https://www.indriya.com/jewellery-stores",                                      "label": "Store locator",             "kind": "Store"},
+    # --- ONE store page to fill in yourself ---------------------------------------
+    # Open the live store locator, click ONE specific store to open its own page,
+    # copy the full address bar, and paste it below (keep the quotes). Until you do,
+    # this line is skipped automatically.
+    {"value": "PASTE_ONE_STORE_PAGE_URL_HERE",                                                 "label": "Store page (one branch)",   "kind": "Store"},
+    # {"value": "https://staging.indriya.com/", "label": "Staging home", "kind": "Homepage"},  # add ONLY if it opens with no login
 ]
 
-# Keep LAB_TARGETS small (roughly 8 tests or fewer total). Each lab test is slow.
-# 2 URLs x 2 devices = 4 tests = fine.
+# Each lab test is slow (~15-40s). 7 pages x 2 devices = 14 tests ~= 5-8 min per run,
+# which is fine on GitHub Actions. If you add many more, split into two runs.
 
 # ============================================================
 #  ----------  nothing to edit below this line  ----------
@@ -181,6 +204,8 @@ def refresh_field():
                     rows.append({
                         "date": date_str,
                         "target": target["value"],
+                        "label": target.get("label", target["value"]),
+                        "kind": target.get("kind", ""),
                         "formFactor": ff,
                         "metric": name,
                         "p75": val,
@@ -198,7 +223,13 @@ def refresh_lab():
     today = datetime.date.today().isoformat()
     new_rows = []
 
-    for url in LAB_TARGETS:
+    for tgt in LAB_TARGETS:
+        url   = tgt["value"]
+        label = tgt.get("label", url)
+        kind  = tgt.get("kind", "")
+        if "PASTE_" in url:
+            print(f"LAB skip {label} (placeholder URL not filled in yet)")
+            continue
         for strategy in LAB_STRATEGIES:
             try:
                 resp = requests.get(
@@ -250,6 +281,8 @@ def refresh_lab():
                 new_rows.append({
                     "date": today,
                     "target": url,
+                    "label": label,
+                    "kind": kind,
                     "strategy": strategy,
                     "metric": name,
                     "value": val,
