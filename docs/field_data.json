@@ -1,1 +1,2749 @@
-{"pulledOn": "not run yet", "rows": []}
+{
+  "pulledOn": "2026-08-05 09:14 UTC",
+  "rows": [
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3127.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3138.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3154.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3127.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2917.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2807.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2809.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2807.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2777.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2843.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2886.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2988.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3167.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3410.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3495.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3533.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3582.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3792.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3959.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4009.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4155.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4348.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4309.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4176.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4025.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 233.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 236.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 237.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 238.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 226.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 218.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 214.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 212.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 211.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 216.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 219.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 219.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 217.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 219.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 225.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 230.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 234.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 239.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 244.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 244.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 247.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 254.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 258.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 265.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 269.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2495.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2502.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2517.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2498.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2323.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2230.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2232.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2223.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2198.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2250.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2286.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2406.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2604.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2863.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2931.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2938.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2965.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3135.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3267.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3309.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3433.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3596.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3539.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3381.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3210.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1411.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1410.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1424.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1412.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1301.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1250.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1254.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1248.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1229.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1245.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1259.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1367.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1573.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1867.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1949.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1910.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1916.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 2091.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 2226.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 2251.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 2362.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 2516.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 2430.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 2175.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1875.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2095.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2119.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2267.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2493.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2291.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2002.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2053.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2082.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2092.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2238.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2228.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2200.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2267.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 2889.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3065.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3222.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3279.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3456.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3615.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3678.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 3948.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4236.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4404.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 4843.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "LCP",
+      "p75": 5453.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.01,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.04,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.11,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.11,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.13,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.62,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.79,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.83,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.86,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.88,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.89,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.88,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.86,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "CLS",
+      "p75": 0.83,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 172.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 173.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 175.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 178.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 180.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 167.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 157.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 159.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 160.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 178.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 194.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 194.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 194.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 201.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 204.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 210.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 212.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 214.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 219.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 227.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 231.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 238.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 241.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 244.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "INP",
+      "p75": 245.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1377.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1416.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1561.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1734.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1591.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1378.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1424.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1455.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1468.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1591.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1577.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1549.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 1602.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2037.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2158.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2259.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2289.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2422.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2562.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2580.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2748.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2887.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 2961.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3183.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "FCP",
+      "p75": 3429.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 875.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 915.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1042.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1152.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 986.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 804.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-03-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 836.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 856.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 862.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 920.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-04-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 903.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 883.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 905.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1131.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1175.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1210.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1217.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1318.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1429.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1425.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1504.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1557.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1586.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1699.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1829.0,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1421.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1390.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1382.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1437.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1437.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1461.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1487.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1508.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1438.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1433.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1413.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1404.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1477.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1529.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1675.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1894.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 2109.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 2230.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 2902.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 3144.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.08,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.06,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.05,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.05,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.05,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.07,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.16,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.2,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.21,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.21,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.22,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.25,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.27,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 68.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 67.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 67.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 66.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 65.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 64.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 75.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 78.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 78.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 78.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 79.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 80.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 86.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 90.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 94.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 95.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 95.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 95.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 95.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 93.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 796.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 801.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 789.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 803.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 789.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-04-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 931.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-02",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 949.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-09",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 965.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 847.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 840.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-30",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 828.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-06",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 834.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 877.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 876.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 999.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 1151.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 1288.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 1402.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-25",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 1769.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-01",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 1946.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-02-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 460.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-21",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 476.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-02-28",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 510.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-07",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 510.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-03-14",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 514.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-16",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 518.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-05-23",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 446.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-13",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 480.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-20",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 470.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-06-27",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 672.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-07-04",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 861.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-11",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 1067.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-07-18",
+      "target": "https://www.indriya.com/",
+      "formFactor": "DESKTOP",
+      "metric": "TTFB",
+      "p75": 1246.0,
+      "rating": "Needs Improvement"
+    }
+  ]
+}
