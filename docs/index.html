@@ -66,6 +66,7 @@
   .card{border:1px solid var(--line);border-radius:10px;padding:12px 12px 8px;border-left-width:5px;border-left-color:var(--line)}
   .card.s-good{border-left-color:var(--good)} .card.s-ni{border-left-color:var(--ni)} .card.s-poor{border-left-color:var(--poor)}
   .card h3{margin:0 0 4px;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .card .target{font-size:10.5px;color:var(--muted);margin:-1px 0 5px}
   .card .latest{font-size:12px;color:var(--muted);margin-bottom:6px}
   .empty{color:var(--muted);font-size:13px;padding:14px;background:var(--panel);border-radius:8px}
   footer{padding:18px 26px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:36px}
@@ -89,6 +90,7 @@
     <span><span class="dot" style="background:var(--poor)"></span>Poor</span>
     <span style="margin-left:auto">Field = slow real-user trend &middot; Lab = fast daily tripwire &middot; don't compare the two directly.</span>
   </div>
+  <div style="font-size:11.5px;color:var(--muted);margin:3px 0 0">On each chart, dashed lines mark Google's thresholds: <span style="color:var(--good)">green = Good</span>, <span style="color:var(--poor)">red = Poor</span>. The caption on each card shows the &ldquo;Good&rdquo; target.</div>
 
   <!-- FIELD -->
   <section class="layer">
@@ -132,6 +134,12 @@ function fmt(metric,v){
   if(metric==='PerfScore') return Math.round(v);
   if(u==='ms') return v>=1000 ? (v/1000).toFixed(2)+' s' : Math.round(v)+' ms';
   return v;
+}
+function fmtT(metric,val){
+  if(metric==='CLS'||metric==='PerfScore') return String(val);
+  const u=(T[metric]&&T[metric].unit)||'';
+  if(u==='ms') return val>=1000 ? parseFloat((val/1000).toFixed(2))+' s' : val+' ms';
+  return String(val);
 }
 function labelOf(row){ return row.label || row.target; }
 
@@ -262,7 +270,10 @@ function buildCard(grid, metric, seriesList, xLabels){
   const card=document.createElement('div'); card.className='card'+(worst?(' s-'+worst):'');
   const badge = latestPts.length ? pill(latestPts[0].rating) : '';
   const latestTxt=latestPts.map((p,i)=>seriesList[i].name+': <b>'+fmt(metric,p.y)+'</b>').join(' &nbsp; ');
-  card.innerHTML='<h3><span>'+metric+'</span>'+badge+'</h3><div class="latest">'+(latestTxt||'&mdash;')+'</div><canvas></canvas>';
+  const tt=T[metric]||{};
+  const targetTxt = metric==='PerfScore' ? 'Google good \u2265 90'
+                  : (tt.good!=null ? 'Google good \u2264 '+fmtT(metric,tt.good) : '');
+  card.innerHTML='<h3><span>'+metric+'</span>'+badge+'</h3>'+(targetTxt?'<div class="target">'+targetTxt+'</div>':'')+'<div class="latest">'+(latestTxt||'&mdash;')+'</div><canvas></canvas>';
   grid.appendChild(card);
 
   const t=T[metric]||{};
