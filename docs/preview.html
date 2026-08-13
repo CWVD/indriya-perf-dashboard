@@ -35,6 +35,18 @@
   .hero .trend{font-size:11px;color:var(--muted);margin-top:3px}
   .hero .desk{font-size:11px;color:var(--muted);margin-top:3px}
   .heronote{font-size:11.5px;color:var(--muted);margin:-6px 0 14px}
+  .dcaps-wrap{margin:-4px 0 16px}
+  .dcaps-head{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin:0 0 7px}
+  .dcaps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .dcap{border:1px solid var(--line);border-radius:8px;padding:9px 11px;border-left-width:4px;border-left-color:var(--line);background:#fcfcfe}
+  .dcap .dk{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px}
+  .dcap .dv{font-size:18px;font-weight:700;margin:2px 0 1px}
+  .dcap .dr{font-size:11px;font-weight:600}
+  .dc-good{border-left-color:var(--good)} .dc-good .dv{color:var(--good)} .dc-good .dr{color:var(--good)}
+  .dc-ni{border-left-color:var(--ni)} .dc-ni .dv{color:var(--ni)} .dc-ni .dr{color:var(--ni)}
+  .dc-poor{border-left-color:var(--poor)} .dc-poor .dv{color:var(--poor)} .dc-poor .dr{color:var(--poor)}
+  .dc-none{border-left-color:var(--line)} .dc-none .dv{color:var(--muted);font-size:13px}
+  .dcaps-note{font-size:11px;color:var(--muted);margin:8px 0 0}
   .hl-good{border-left-color:var(--good)} .hl-good .v{color:var(--good)} .hl-good .r{color:var(--good)}
   .hl-ni{border-left-color:var(--ni)} .hl-ni .v{color:var(--ni)} .hl-ni .r{color:var(--ni)}
   .hl-poor{border-left-color:var(--poor)} .hl-poor .v{color:var(--poor)} .hl-poor .r{color:var(--poor)}
@@ -163,6 +175,29 @@ async function load(path){
 function seriesOf(rows, fn){ return rows.filter(fn).sort((a,b)=> a.date<b.date?-1:(a.date>b.date?1:0)); }
 function latest(rows, fn){ const m=seriesOf(rows,fn); return m.length? m[m.length-1] : null; }
 
+/* ---------------- DESKTOP CAPSULE STRIP ----------------
+   Prefers whole-site (origin) desktop; falls back to homepage desktop if the
+   origin has no desktop dataset (CrUX's usual case for a mobile-dominant site).
+   Labels whichever source it used, so it auto-upgrades if origin desktop appears. */
+function buildDesktopCaps(frows, originVal, homepageVal){
+  const metrics=['LCP','INP','CLS'];
+  let anyFallback=false, anyData=false;
+  const caps=metrics.map(mn=>{
+    let cur=null, src=null;
+    if(originVal){ const s=seriesOf(frows, r=>r.target===originVal&&r.formFactor==='DESKTOP'&&r.metric===mn); if(s.length){ cur=s[s.length-1]; src='whole site'; } }
+    if(!cur && homepageVal){ const s=seriesOf(frows, r=>r.target===homepageVal&&r.formFactor==='DESKTOP'&&r.metric===mn); if(s.length){ cur=s[s.length-1]; src='homepage'; anyFallback=true; } }
+    if(!cur) return '<div class="dcap dc-none"><div class="dk">'+mname(mn)+' &middot; desktop</div><div class="dv">no data</div></div>';
+    anyData=true;
+    const c=rcls(cur.rating);
+    return '<div class="dcap dc-'+c+'"><div class="dk">'+mname(mn)+' &middot; desktop &middot; '+src+'</div><div class="dv">'+fmt(mn,cur.p75)+'</div><div class="dr">'+cur.rating+'</div></div>';
+  }).join('');
+  if(!anyData) return '';
+  const note = anyFallback
+    ? 'Whole-site desktop isn\u2019t published by CrUX for Indriya (desktop is a minority of real-user traffic), so desktop is shown at homepage level. The mobile tiles above are the whole-site figure Google ranks on \u2014 note the two are different scopes.'
+    : 'Whole-site desktop, real users.';
+  return '<div class="dcaps-wrap"><div class="dcaps-head">Desktop (secondary)</div><div class="dcaps">'+caps+'</div><div class="dcaps-note">'+note+'</div></div>';
+}
+
 /* ---------------- EXECUTIVE SUMMARY ---------------- */
 function buildExec(field, lab){
   const host=document.getElementById('execSummary');
@@ -175,8 +210,8 @@ function buildExec(field, lab){
   const originVal=(frows.find(r=>r.kind==='Origin')||{}).target;
   const heroMetrics=['LCP','INP','CLS'];
   const heroes=heroMetrics.map(mn=>({metric:mn,
-    s:  originVal? seriesOf(frows, r=>r.target===originVal&&r.formFactor==='PHONE'  &&r.metric===mn):[],
-    sd: originVal? seriesOf(frows, r=>r.target===originVal&&r.formFactor==='DESKTOP'&&r.metric===mn):[] }));
+    s: originVal? seriesOf(frows, r=>r.target===originVal&&r.formFactor==='PHONE'&&r.metric===mn):[] }));
+  const homepageVal=(frows.find(r=>r.kind==='Homepage')||{}).target;
 
   // verdict from latest hero ratings
   let worst='none', have=false;
@@ -191,7 +226,6 @@ function buildExec(field, lab){
   const heroHtml=heroes.map(h=>{
     if(!h.s.length) return '<div class="hero hl-none"><div class="k">'+mname(h.metric)+' &middot; whole site</div><div class="v">no data</div><div class="r">&mdash; mobile</div></div>';
     const cur=h.s[h.s.length-1], first=h.s[0], c=rcls(cur.rating);
-    const dcur=h.sd.length? h.sd[h.sd.length-1]:null;
     let trend='';
     if(h.s.length>=2){
       const d=cur.p75-first.p75, meaningful=(h.metric==='CLS')? Math.abs(d)>0.02 : Math.abs(d) > first.p75*0.10;
@@ -202,10 +236,7 @@ function buildExec(field, lab){
       else if(!meaningful) trend='stable '+span;
       else trend=(d<0?'\u25be improving':'\u25b4 worsening')+' '+span+' '+vals;
     }
-    const deskHtml = dcur
-      ? '<div class="desk">desktop: '+fmt(h.metric,dcur.p75)+' <span style="color:'+rcolor(dcur.rating)+'">&middot; '+dcur.rating+'</span></div>'
-      : '<div class="desk">desktop: no data</div>';
-    return '<div class="hero hl-'+c+'"><div class="k">'+mname(h.metric)+' &middot; whole site</div><div class="v">'+fmt(h.metric,cur.p75)+'</div><div class="r">'+cur.rating+' &middot; mobile</div>'+deskHtml+(trend?'<div class="trend">'+trend+'</div>':'')+'</div>';
+    return '<div class="hero hl-'+c+'"><div class="k">'+mname(h.metric)+' &middot; whole site</div><div class="v">'+fmt(h.metric,cur.p75)+'</div><div class="r">'+cur.rating+' &middot; mobile</div>'+(trend?'<div class="trend">'+trend+'</div>':'')+'</div>';
   }).join('');
 
   // what needs attention (unchanged logic): latest NI/Poor across field+lab
@@ -257,7 +288,8 @@ function buildExec(field, lab){
     ? '<div class="spike"><b>\u26a0 Possible regression:</b> '+spikes.slice(0,3).join('; ')+'. Check whether a recent change went live.</div>'
     : '';
 
-  host.innerHTML='<div class="verdict '+vClass+'"><h2>'+vTitle+'</h2><p>'+vMsg+'</p></div><div class="heroes">'+heroHtml+'</div><div class="heronote">Headline tiles show <b>mobile</b> (the version Google ranks on); the smaller figure is <b>desktop</b>. Every chart below plots both.</div>'+spikeHtml+attHtml;
+  const desktopHtml = buildDesktopCaps(frows, originVal, homepageVal);
+  host.innerHTML='<div class="verdict '+vClass+'"><h2>'+vTitle+'</h2><p>'+vMsg+'</p></div><div class="heroes">'+heroHtml+'</div><div class="heronote">Headline tiles = whole-site <b>mobile</b> (the version Google ranks on).</div>'+desktopHtml+spikeHtml+attHtml;
 }
 
 /* ---------------- CHART CARDS ---------------- */
