@@ -33,6 +33,8 @@
   .hero .v{font-size:26px;font-weight:700;margin:3px 0 2px}
   .hero .r{font-size:12px;font-weight:600}
   .hero .trend{font-size:11px;color:var(--muted);margin-top:3px}
+  .hero .desk{font-size:11px;color:var(--muted);margin-top:3px}
+  .heronote{font-size:11.5px;color:var(--muted);margin:-6px 0 14px}
   .hl-good{border-left-color:var(--good)} .hl-good .v{color:var(--good)} .hl-good .r{color:var(--good)}
   .hl-ni{border-left-color:var(--ni)} .hl-ni .v{color:var(--ni)} .hl-ni .r{color:var(--ni)}
   .hl-poor{border-left-color:var(--poor)} .hl-poor .v{color:var(--poor)} .hl-poor .r{color:var(--poor)}
@@ -150,6 +152,9 @@ function fmtT(metric,val){
 }
 function labelOf(row){ return row.label || row.target; }
 function median(a){ if(!a.length) return null; const s=[...a].sort((x,y)=>x-y); const n=s.length; return n%2? s[(n-1)/2] : (s[n/2-1]+s[n/2])/2; }
+const DISPLAY={PerfScore:'Performance Score'};
+function mname(m){ return DISPLAY[m]||m; }
+function monthsBetween(d1,d2){ const a=new Date(d1),b=new Date(d2); const mo=Math.round((b-a)/(1000*60*60*24*30.44)); return Math.max(1,mo); }
 
 async function load(path){
   try{ const r=await fetch(path+'?t='+Date.now()); return await r.json(); }
@@ -169,7 +174,9 @@ function buildExec(field, lab){
 
   const originVal=(frows.find(r=>r.kind==='Origin')||{}).target;
   const heroMetrics=['LCP','INP','CLS'];
-  const heroes=heroMetrics.map(mn=>({metric:mn, s: originVal? seriesOf(frows, r=>r.target===originVal&&r.formFactor==='PHONE'&&r.metric===mn):[] }));
+  const heroes=heroMetrics.map(mn=>({metric:mn,
+    s:  originVal? seriesOf(frows, r=>r.target===originVal&&r.formFactor==='PHONE'  &&r.metric===mn):[],
+    sd: originVal? seriesOf(frows, r=>r.target===originVal&&r.formFactor==='DESKTOP'&&r.metric===mn):[] }));
 
   // verdict from latest hero ratings
   let worst='none', have=false;
@@ -182,18 +189,23 @@ function buildExec(field, lab){
   else { vClass='v-good'; vTitle='Core Web Vitals passing'; vMsg='Whole-site Core Web Vitals are in the good range for real users on mobile.'; }
 
   const heroHtml=heroes.map(h=>{
-    if(!h.s.length) return '<div class="hero hl-none"><div class="k">'+h.metric+' &middot; whole site, mobile</div><div class="v">no data</div><div class="r">&mdash;</div></div>';
+    if(!h.s.length) return '<div class="hero hl-none"><div class="k">'+mname(h.metric)+' &middot; whole site</div><div class="v">no data</div><div class="r">&mdash; mobile</div></div>';
     const cur=h.s[h.s.length-1], first=h.s[0], c=rcls(cur.rating);
+    const dcur=h.sd.length? h.sd[h.sd.length-1]:null;
     let trend='';
     if(h.s.length>=2){
       const d=cur.p75-first.p75, meaningful=(h.metric==='CLS')? Math.abs(d)>0.02 : Math.abs(d) > first.p75*0.10;
+      const mo=monthsBetween(first.date,cur.date), span='over ~'+mo+' month'+(mo>1?'s':'');
       const vals='('+fmt(h.metric,first.p75)+' \u2192 '+fmt(h.metric,cur.p75)+')';
-      if(bandRank(cur.rating)>bandRank(first.rating)) trend='<span class="cross">\u26a0 crossed into '+cur.rating+' this window</span> '+vals;
-      else if(bandRank(cur.rating)<bandRank(first.rating)) trend='recovered to '+cur.rating+' this window '+vals;
-      else if(!meaningful) trend='stable this window';
-      else trend=(d<0?'\u25be improving':'\u25b4 worsening')+' this window '+vals;
+      if(bandRank(cur.rating)>bandRank(first.rating)) trend='<span class="cross">\u26a0 '+first.rating+' \u2192 '+cur.rating+' '+span+'</span> '+vals;
+      else if(bandRank(cur.rating)<bandRank(first.rating)) trend='recovered: '+first.rating+' \u2192 '+cur.rating+' '+span+' '+vals;
+      else if(!meaningful) trend='stable '+span;
+      else trend=(d<0?'\u25be improving':'\u25b4 worsening')+' '+span+' '+vals;
     }
-    return '<div class="hero hl-'+c+'"><div class="k">'+h.metric+' &middot; whole site, mobile</div><div class="v">'+fmt(h.metric,cur.p75)+'</div><div class="r">'+cur.rating+'</div>'+(trend?'<div class="trend">'+trend+'</div>':'')+'</div>';
+    const deskHtml = dcur
+      ? '<div class="desk">desktop: '+fmt(h.metric,dcur.p75)+' <span style="color:'+rcolor(dcur.rating)+'">&middot; '+dcur.rating+'</span></div>'
+      : '<div class="desk">desktop: no data</div>';
+    return '<div class="hero hl-'+c+'"><div class="k">'+mname(h.metric)+' &middot; whole site</div><div class="v">'+fmt(h.metric,cur.p75)+'</div><div class="r">'+cur.rating+' &middot; mobile</div>'+deskHtml+(trend?'<div class="trend">'+trend+'</div>':'')+'</div>';
   }).join('');
 
   // what needs attention (unchanged logic): latest NI/Poor across field+lab
@@ -215,7 +227,7 @@ function buildExec(field, lab){
   let attHtml='';
   if(top.length){
     attHtml='<div class="attention"><h3>What needs attention</h3>'+
-      top.map(i=>'<div class="att-item">'+pill(i.rating)+'<span class="att-name">'+i.label+' &middot; '+i.metric+' <span style="color:#98a2b3">('+i.src+', '+i.dim+')</span></span><span class="att-val" style="color:'+rcolor(i.rating)+'">'+fmt(i.metric,i.val)+'</span></div>').join('')+'</div>';
+      top.map(i=>'<div class="att-item">'+pill(i.rating)+'<span class="att-name">'+i.label+' &middot; '+mname(i.metric)+' <span style="color:#98a2b3">('+i.src+', '+i.dim+')</span></span><span class="att-val" style="color:'+rcolor(i.rating)+'">'+fmt(i.metric,i.val)+'</span></div>').join('')+'</div>';
   } else if(have){
     attHtml='<div class="attention"><h3>What needs attention</h3><div class="att-item" style="color:var(--good)">Nothing failing right now \u2014 all tracked metrics are in the good range.</div></div>';
   }
@@ -245,7 +257,7 @@ function buildExec(field, lab){
     ? '<div class="spike"><b>\u26a0 Possible regression:</b> '+spikes.slice(0,3).join('; ')+'. Check whether a recent change went live.</div>'
     : '';
 
-  host.innerHTML='<div class="verdict '+vClass+'"><h2>'+vTitle+'</h2><p>'+vMsg+'</p></div><div class="heroes">'+heroHtml+'</div>'+spikeHtml+attHtml;
+  host.innerHTML='<div class="verdict '+vClass+'"><h2>'+vTitle+'</h2><p>'+vMsg+'</p></div><div class="heroes">'+heroHtml+'</div><div class="heronote">Headline tiles show <b>mobile</b> (the version Google ranks on); the smaller figure is <b>desktop</b>. Every chart below plots both.</div>'+spikeHtml+attHtml;
 }
 
 /* ---------------- CHART CARDS ---------------- */
@@ -259,12 +271,14 @@ function buildCard(grid, metric, seriesList, xLabels, opts){
   card.className='card'+(worstCls?(' s-'+worstCls):'')+(opts.lab?' lab':'');
   const badge=latestPts.length? pill(worstRating):'';
   const tt=T[metric]||{};
-  const targetTxt = metric==='PerfScore'?'Good \u2265 90':(tt.good!=null?'Good \u2264 '+fmtT(metric,tt.good):'');
+  let targetTxt = metric==='PerfScore'?'Good \u2265 90':(tt.good!=null?'Good \u2264 '+fmtT(metric,tt.good):'');
+  if(metric==='TBT' && targetTxt) targetTxt+=' &middot; lab stand-in for INP';
+  if(metric==='INP' && targetTxt) targetTxt+=' &middot; real users only';
   const latestTxt=latestPts.map((p,i)=>{
     const nm=seriesList[i].name;
     return '<span style="color:'+(DEVICE[nm]||'#333')+';font-weight:600">'+nm+'</span>: <b style="color:'+rcolor(p.rating)+'">'+fmt(metric,p.y)+'</b>';
   }).join(' &nbsp; ');
-  card.innerHTML='<h3><span>'+metric+'</span>'+badge+'</h3>'+(targetTxt?'<div class="target">'+targetTxt+'</div>':'')+'<div class="latest">'+(latestTxt||'&mdash;')+'</div><canvas></canvas>';
+  card.innerHTML='<h3><span>'+mname(metric)+'</span>'+badge+'</h3>'+(targetTxt?'<div class="target">'+targetTxt+'</div>':'')+'<div class="latest">'+(latestTxt||'&mdash;')+'</div><canvas></canvas>';
   grid.appendChild(card);
 
   const datasets=seriesList.map(s=>({
@@ -281,7 +295,7 @@ function buildCard(grid, metric, seriesList, xLabels, opts){
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:seriesList.length>1,labels:{usePointStyle:true,pointStyle:'circle',boxWidth:8,font:{size:10},filter:i=>i.text!=='good'&&i.text!=='poor'}}},
       scales:{x:{type:'category',labels:xLabels,ticks:{font:{size:9},maxRotation:0,autoSkip:true,maxTicksLimit:6},grid:{display:false}},
-              y:{ticks:{font:{size:10}},grid:{color:'#f0f1f4'},beginAtZero:metric==='CLS'}}}
+              y:{ticks:{font:{size:10},callback:function(v){ const u=(T[metric]&&T[metric].unit)||''; if(u!=='ms') return v; return (this.max||0)>=3000 ? (v/1000)+'s' : v; }},grid:{color:'#f0f1f4'},beginAtZero:metric==='CLS'}}}
   });
 }
 
