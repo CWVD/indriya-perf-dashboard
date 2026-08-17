@@ -116,6 +116,99 @@ T = {
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIELD_FILE = os.path.join(HERE, "docs", "field_data.json")
 LAB_FILE   = os.path.join(HERE, "docs", "lab_data.json")
+TECH_FILE  = os.path.join(HERE, "docs", "tech_data.json")
+
+# Lighthouse audit IDs we surface as "opportunities" (the developer punch-list).
+OPP_IDS = [
+    "render-blocking-resources", "unused-javascript", "unused-css-rules",
+    "unminified-javascript", "unminified-css", "uses-responsive-images",
+    "modern-image-formats", "uses-optimized-images", "uses-text-compression",
+    "uses-long-cache-ttl", "total-byte-weight", "efficient-animated-content",
+    "duplicated-javascript", "legacy-javascript", "third-party-summary",
+    "bootup-time", "mainthread-work-breakdown", "dom-size", "server-response-time",
+]
+
+
+def _find_node_label(obj):
+    """Defensive deep-search for a Lighthouse 'node' element label."""
+    if isinstance(obj, dict):
+        if obj.get("type") == "node" and (obj.get("nodeLabel") or obj.get("snippet")):
+            return obj.get("nodeLabel") or obj.get("snippet")
+        for v in obj.values():
+            r = _find_node_label(v)
+            if r:
+                return r
+    elif isinstance(obj, list):
+        for v in obj:
+            r = _find_node_label(v)
+            if r:
+                return r
+    return None
+
+
+def extract_lab_diagnostics(lr):
+    """Pull the developer-facing detail from a Lighthouse result. All best-effort:
+    if a field's shape isn't found it is simply omitted (never crashes)."""
+    audits = lr.get("audits", {}) or {}
+
+    # LCP element
+    lcp_el = _find_node_label((audits.get("largest-contentful-paint-element") or {}).get("details") or {})
+
+    # CLS shifting elements
+    cls_elems = []
+    cls_items = ((audits.get("layout-shift-elements") or {}).get("details") or {}).get("items") or []
+    for it in cls_items[:4]:
+        label = None
+        if isinstance(it, dict):
+            node = it.get("node")
+            if isinstance(node, dict):
+                label = node.get("nodeLabel") or node.get("snippet")
+            if not label:
+                label = _find_node_label(it)
+            score = it.get("score")
+        if label:
+            cls_elems.append({"label": label,
+                              "score": round(score, 4) if isinstance(score, (int, float)) else None})
+
+    # Opportunities
+    opps = []
+    for aid in OPP_IDS:
+        a = audits.get(aid)
+        if not a:
+            continue
+        score = a.get("score")
+        dv = a.get("displayValue")
+        det = a.get("details") or {}
+        sav_ms = det.get("overallSavingsMs")
+        sav_by = det.get("overallSavingsBytes")
+        # skip audits that clearly passed and carry no savings
+        if (score is not None and score >= 0.9) and not sav_ms and not sav_by:
+            continue
+        opps.append({
+            "id": aid, "title": a.get("title", aid), "detail": dv or "",
+            "savings_ms": round(sav_ms) if isinstance(sav_ms, (int, float)) else None,
+            "savings_bytes": round(sav_by) if isinstance(sav_by, (int, float)) else None,
+        })
+    opps.sort(key=lambda o: (-(o["savings_ms"] or 0), -(o["savings_bytes"] or 0)))
+    opps = opps[:6]
+
+    out = {}
+    if lcp_el:
+        out["lcp_element"] = lcp_el
+    if cls_elems:
+        out["cls_elements"] = cls_elems
+    if opps:
+        out["opps"] = opps
+    return out
+
+
+def update_tech(section, section_data, pulled_key):
+    """Merge one section (lab/field) into tech_data.json, preserving the other."""
+    tech = read_json(TECH_FILE, default={})
+    tech.pop("sample", None)   # first real write clears the sample flag
+    tech[section] = section_data
+    tech[pulled_key] = now_iso()
+    write_json(TECH_FILE, tech)
 
 
 def rate(metric, val):
@@ -159,6 +252,7 @@ def write_json(path, obj):
 # full ~6-month history, so rewriting keeps it clean with no duplicates.
 def refresh_field():
     rows = []
+    tech_field = {}   # target -> {label,kind, formFactor -> metric -> {good,ni,poor}}
     for target in FIELD_TARGETS:
         for ff in FIELD_FORM_FACTORS:
             body = {"formFactor": ff, "metrics": FIELD_METRICS}
@@ -212,8 +306,23 @@ def refresh_field():
                         "rating": rate(name, val),
                     })
 
+                # distribution (good/ni/poor %) -- latest point of the histogram timeseries
+                hist = mo.get("histogramTimeseries")
+                if hist and len(hist) >= 3:
+                    def _last_density(b):
+                        ds = (b or {}).get("densities") or []
+                        return ds[-1] if ds else None
+                    g, n, pr = _last_density(hist[0]), _last_density(hist[1]), _last_density(hist[2])
+                    if None not in (g, n, pr):
+                        node = tech_field.setdefault(target["value"], {
+                            "label": target.get("label", target["value"]),
+                            "kind": target.get("kind", "")})
+                        node.setdefault(ff, {})[FIELD_PRETTY[m]] = {
+                            "good": round(g * 100), "ni": round(n * 100), "poor": round(pr * 100)}
+
     write_json(FIELD_FILE, {"pulledOn": now_iso(), "rows": rows})
-    print(f"FIELD wrote {len(rows)} rows.")
+    update_tech("field", tech_field, "fieldPulled")
+    print(f"FIELD wrote {len(rows)} rows; tech distribution for {len(tech_field)} targets.")
 
 
 # ============ LAB  (PageSpeed Insights API) ============
@@ -222,6 +331,7 @@ def refresh_field():
 def refresh_lab():
     today = datetime.date.today().isoformat()
     new_rows = []
+    tech_lab = {}   # url -> {label,kind, strategy -> diagnostics}
 
     for tgt in LAB_TARGETS:
         url   = tgt["value"]
@@ -289,10 +399,17 @@ def refresh_lab():
                     "rating": rate(name, val),
                 })
 
+            # developer diagnostics from the same Lighthouse result
+            diag = extract_lab_diagnostics(lr)
+            if diag:
+                node = tech_lab.setdefault(url, {"label": label, "kind": kind})
+                node[strategy] = diag
+
     existing = read_json(LAB_FILE, default={"rows": []})
     all_rows = existing.get("rows", []) + new_rows
     write_json(LAB_FILE, {"pulledOn": now_iso(), "rows": all_rows})
-    print(f"LAB wrote {len(new_rows)} new rows (total {len(all_rows)}).")
+    update_tech("lab", tech_lab, "labPulled")
+    print(f"LAB wrote {len(new_rows)} new rows (total {len(all_rows)}); tech diagnostics for {len(tech_lab)} pages.")
 
 
 if __name__ == "__main__":
