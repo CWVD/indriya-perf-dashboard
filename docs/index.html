@@ -9,6 +9,7 @@
   :root{
     --ink:#1F2A44; --navy:#022E71; --gold:#9A6A2F;
     --good:#1a7f37; --good-bg:#e7f4ea; --ni:#b06a00; --ni-bg:#fbeed9; --poor:#c1121f; --poor-bg:#fbe3e5;
+    --mobile:#2563eb; --desktop:#9333ea;
     --line:#e4e7ec; --muted:#667085; --bg:#ffffff; --panel:#f7f8fa;
   }
   *{box-sizing:border-box}
@@ -18,18 +19,13 @@
   .sub{margin-top:4px;color:var(--muted);font-size:12.5px}
   .wrap{padding:20px 26px;max-width:1180px;margin:0 auto}
 
-  /* executive summary */
   .verdict{border-radius:12px;padding:16px 18px;margin-bottom:16px;border:1px solid var(--line)}
   .verdict h2{margin:0 0 3px;font-size:18px}
   .verdict p{margin:0;font-size:13.5px}
-  .v-good{background:var(--good-bg);border-color:#bfe2c8}
-  .v-good h2{color:var(--good)}
-  .v-ni{background:var(--ni-bg);border-color:#eed3a6}
-  .v-ni h2{color:var(--ni)}
-  .v-poor{background:var(--poor-bg);border-color:#f0c2c6}
-  .v-poor h2{color:var(--poor)}
-  .v-none{background:var(--panel)}
-  .v-none h2{color:var(--muted)}
+  .v-good{background:var(--good-bg);border-color:#bfe2c8} .v-good h2{color:var(--good)}
+  .v-ni{background:var(--ni-bg);border-color:#eed3a6} .v-ni h2{color:var(--ni)}
+  .v-poor{background:var(--poor-bg);border-color:#f0c2c6} .v-poor h2{color:var(--poor)}
+  .v-none{background:var(--panel)} .v-none h2{color:var(--muted)}
 
   .heroes{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:16px}
   .hero{border:1px solid var(--line);border-radius:10px;padding:13px 14px;border-left-width:5px}
@@ -37,10 +33,25 @@
   .hero .v{font-size:26px;font-weight:700;margin:3px 0 2px}
   .hero .r{font-size:12px;font-weight:600}
   .hero .trend{font-size:11px;color:var(--muted);margin-top:3px}
+  .hero .desk{font-size:11px;color:var(--muted);margin-top:3px}
+  .heronote{font-size:11.5px;color:var(--muted);margin:-6px 0 14px}
+  .dcaps-wrap{margin:-4px 0 16px}
+  .dcaps-head{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin:0 0 7px}
+  .dcaps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .dcap{border:1px solid var(--line);border-radius:8px;padding:9px 11px;border-left-width:4px;border-left-color:var(--line);background:#fcfcfe}
+  .dcap .dk{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px}
+  .dcap .dv{font-size:18px;font-weight:700;margin:2px 0 1px}
+  .dcap .dr{font-size:11px;font-weight:600}
+  .dc-good{border-left-color:var(--good)} .dc-good .dv{color:var(--good)} .dc-good .dr{color:var(--good)}
+  .dc-ni{border-left-color:var(--ni)} .dc-ni .dv{color:var(--ni)} .dc-ni .dr{color:var(--ni)}
+  .dc-poor{border-left-color:var(--poor)} .dc-poor .dv{color:var(--poor)} .dc-poor .dr{color:var(--poor)}
+  .dc-none{border-left-color:var(--line)} .dc-none .dv{color:var(--muted);font-size:13px}
+  .dcaps-note{font-size:11px;color:var(--muted);margin:8px 0 0}
   .hl-good{border-left-color:var(--good)} .hl-good .v{color:var(--good)} .hl-good .r{color:var(--good)}
   .hl-ni{border-left-color:var(--ni)} .hl-ni .v{color:var(--ni)} .hl-ni .r{color:var(--ni)}
   .hl-poor{border-left-color:var(--poor)} .hl-poor .v{color:var(--poor)} .hl-poor .r{color:var(--poor)}
   .hl-none{border-left-color:var(--line)} .hl-none .v{color:var(--muted);font-size:16px}
+  .hero .trend .cross{color:var(--poor);font-weight:600}
 
   .attention{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
   .attention h3{margin:0 0 8px;font-size:13px;color:var(--navy)}
@@ -56,21 +67,48 @@
 
   .legend{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0 2px;font-size:12px;color:var(--muted)}
   .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .devkey{font-size:11.5px;color:var(--muted);margin:3px 0 0}
+  .devkey b{font-weight:600}
 
   .layer{margin-top:28px}
   .layer h2{font-size:15px;color:var(--navy);margin:0 0 2px;border-left:4px solid var(--gold);padding-left:9px}
   .layer .note{color:var(--muted);font-size:12.5px;margin:0 0 12px;padding-left:13px}
+  .lab-caveat{background:var(--ni-bg);border:1px solid #eed3a6;border-radius:8px;padding:9px 13px;margin:0 0 12px;font-size:12.5px;color:#7a5200}
   .controls{margin:8px 0 14px;padding-left:13px}
   select{font-size:13px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;color:var(--ink)}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
   .card{border:1px solid var(--line);border-radius:10px;padding:12px 12px 8px;border-left-width:5px;border-left-color:var(--line)}
   .card.s-good{border-left-color:var(--good)} .card.s-ni{border-left-color:var(--ni)} .card.s-poor{border-left-color:var(--poor)}
+  .card.lab{background:#fbfcfe}
   .card h3{margin:0 0 4px;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:8px}
   .card .target{font-size:10.5px;color:var(--muted);margin:-1px 0 5px}
   .card .latest{font-size:12px;color:var(--muted);margin-bottom:6px}
+  .diag-head{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin:18px 0 8px;padding-left:2px}
+  .grid.diag .card h3{font-size:12px}
+  .grid.diag .card canvas{max-height:120px}
+  .grid.diag .card{opacity:.94}
   .empty{color:var(--muted);font-size:13px;padding:14px;background:var(--panel);border-radius:8px}
   footer{padding:18px 26px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:36px}
   canvas{max-height:170px}
+  .techbox{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+  .techbox summary{cursor:pointer;padding:11px 15px;font-size:13px;font-weight:600;color:var(--navy);list-style:none}
+  .techbox summary::-webkit-details-marker{display:none}
+  .techbox summary:before{content:'\25b8  ';color:var(--gold)}
+  .techbox[open] summary:before{content:'\25be  '}
+  .tinner{padding:4px 16px 14px}
+  .tdev{margin-top:10px;padding-top:9px;border-top:1px solid #eef0f3}
+  .tdevhead{font-size:12px;font-weight:700;margin-bottom:5px}
+  .trow{font-size:12.5px;margin:2px 0}
+  .tk{color:var(--muted)}
+  .tmono{font-family:Consolas,monospace;font-size:11.5px;background:#eef0f3;padding:1px 5px;border-radius:4px;color:#b02a37}
+  ul.topps{margin:5px 0 0;padding:0;list-style:none}
+  ul.topps li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-top:1px solid #f1f2f4;font-size:12.5px}
+  ul.topps li:first-child{border-top:none}
+  .tsave{font-weight:700;white-space:nowrap;color:var(--poor);font-variant-numeric:tabular-nums}
+  .distrow{margin:7px 0}
+  .distrow .dlbl{font-size:12px;display:flex;justify-content:space-between;margin-bottom:3px}
+  .dbar{display:flex;height:13px;border-radius:4px;overflow:hidden;border:1px solid #e9eaee}
+  .tempty{color:var(--muted);font-size:12.5px;padding:6px 0}
 </style>
 </head>
 <body>
@@ -81,8 +119,8 @@
 
 <div class="wrap">
 
-  <!-- EXECUTIVE SUMMARY -->
   <div id="execSummary"></div>
+  <div id="techSample"></div>
 
   <div class="legend">
     <span><span class="dot" style="background:var(--good)"></span>Good</span>
@@ -90,7 +128,7 @@
     <span><span class="dot" style="background:var(--poor)"></span>Poor</span>
     <span style="margin-left:auto">Field = slow real-user trend &middot; Lab = fast daily tripwire &middot; don't compare the two directly.</span>
   </div>
-  <div style="font-size:11.5px;color:var(--muted);margin:3px 0 0">On each chart, dashed lines mark Google's thresholds: <span style="color:var(--good)">green = Good</span>, <span style="color:var(--poor)">red = Poor</span>. The caption on each card shows the &ldquo;Good&rdquo; target.</div>
+  <div class="devkey">On the charts, line colour shows the device: <b style="color:var(--mobile)">blue = mobile</b>, <b style="color:var(--desktop)">purple = desktop</b>. Dashed lines mark Google's thresholds (green = Good, red = Poor); status colour is on the pill and card edge.</div>
 
   <!-- FIELD -->
   <section class="layer">
@@ -98,14 +136,17 @@
     <p class="note">28-day real-user p75 from CrUX. The whole-site figure is the headline; product/store pages aren't here because they rarely have enough traffic (they're covered under Lab). Refreshes weekly.</p>
     <div class="controls"><label>Page:&nbsp;</label><select id="fieldTarget"></select></div>
     <div id="fieldGrid" class="grid"></div>
+    <div id="fieldTech"></div>
   </section>
 
   <!-- LAB -->
   <section class="layer">
     <h2>Lab &mdash; fresh test (spike / regression tripwire)</h2>
-    <p class="note">A test we trigger daily on the full page mix (homepage, PLPs, PDPs, store). A sudden jump flags a regression next-day. Refreshes daily.</p>
+    <p class="note">A test we trigger daily on the full page mix (homepage, PLPs, PDPs, store). Refreshes daily.</p>
+    <div class="lab-caveat"><b>Read lab as a tripwire, not a measurement.</b> These are throttled lab simulations &mdash; watch the <b>direction</b> and the <b>pass/fail colour</b>, not the absolute number. A lab LCP of 50&thinsp;s does not mean real users wait 50&thinsp;s; the whole-site Field figures above are the real-user truth.</div>
     <div class="controls"><label>Page:&nbsp;</label><select id="labTarget"></select></div>
     <div id="labGrid" class="grid"></div>
+    <div id="labTech"></div>
   </section>
 </div>
 
@@ -120,13 +161,15 @@ const T = {
   TTFB:{good:800,poor:1800,unit:'ms'}, TBT:{good:200,poor:600,unit:'ms'},
   SI:{good:3400,poor:5800,unit:'ms'},  PerfScore:{good:90,poor:50,unit:''}
 };
-const FIELD_ORDER = ['LCP','INP','CLS','FCP','TTFB'];
-const LAB_ORDER   = ['PerfScore','LCP','CLS','TBT','FCP','SI'];
-const COL = {good:'#1a7f37', ni:'#b06a00', poor:'#c1121f'};
+const CORE = {field:['LCP','INP','CLS'],        lab:['PerfScore','LCP','CLS','TBT']};
+const DIAG = {field:['FCP','TTFB'],             lab:['FCP','SI']};
+const COL  = {good:'#1a7f37', ni:'#b06a00', poor:'#c1121f'};
+const DEVICE = {PHONE:'#2563eb', mobile:'#2563eb', DESKTOP:'#9333ea', desktop:'#9333ea'};
 
 function rcls(r){ return r==='Good'?'good':r==='Needs Improvement'?'ni':'poor'; }
 function rcolor(r){ return r==='Good'?COL.good:r==='Needs Improvement'?COL.ni:COL.poor; }
 function pill(r){ return r? '<span class="pill p-'+rcls(r)+'">'+r+'</span>' : ''; }
+function bandRank(r){ return r==='Good'?0:r==='Needs Improvement'?1:r==='Poor'?2:-1; }
 function fmt(metric,v){
   if(v==null) return '\u2014';
   const u=(T[metric]&&T[metric].unit)||'';
@@ -142,24 +185,39 @@ function fmtT(metric,val){
   return String(val);
 }
 function labelOf(row){ return row.label || row.target; }
+function median(a){ if(!a.length) return null; const s=[...a].sort((x,y)=>x-y); const n=s.length; return n%2? s[(n-1)/2] : (s[n/2-1]+s[n/2])/2; }
+const DISPLAY={PerfScore:'Performance Score'};
+function mname(m){ return DISPLAY[m]||m; }
+function monthsBetween(d1,d2){ const a=new Date(d1),b=new Date(d2); const mo=Math.round((b-a)/(1000*60*60*24*30.44)); return Math.max(1,mo); }
 
 async function load(path){
   try{ const r=await fetch(path+'?t='+Date.now()); return await r.json(); }
   catch(e){ return {pulledOn:'load failed',rows:[]}; }
 }
+function seriesOf(rows, fn){ return rows.filter(fn).sort((a,b)=> a.date<b.date?-1:(a.date>b.date?1:0)); }
+function latest(rows, fn){ const m=seriesOf(rows,fn); return m.length? m[m.length-1] : null; }
 
-// latest row for a filter, by date
-function latest(rows, fn){
-  const m=rows.filter(fn); if(!m.length) return null;
-  m.sort((a,b)=> (a.date<b.date?-1:(a.date>b.date?1:0)));
-  return m[m.length-1];
-}
-// previous distinct-date row (for trend/spike)
-function prev(rows, fn){
-  const m=rows.filter(fn); if(m.length<2) return null;
-  const dates=[...new Set(m.map(r=>r.date))].sort();
-  const pd=dates[dates.length-2];
-  return m.find(r=>r.date===pd)||null;
+/* ---------------- DESKTOP CAPSULE STRIP ----------------
+   Prefers whole-site (origin) desktop; falls back to homepage desktop if the
+   origin has no desktop dataset (CrUX's usual case for a mobile-dominant site).
+   Labels whichever source it used, so it auto-upgrades if origin desktop appears. */
+function buildDesktopCaps(frows, originVal, homepageVal){
+  const metrics=['LCP','INP','CLS'];
+  let anyFallback=false, anyData=false;
+  const caps=metrics.map(mn=>{
+    let cur=null, src=null;
+    if(originVal){ const s=seriesOf(frows, r=>r.target===originVal&&r.formFactor==='DESKTOP'&&r.metric===mn); if(s.length){ cur=s[s.length-1]; src='whole site'; } }
+    if(!cur && homepageVal){ const s=seriesOf(frows, r=>r.target===homepageVal&&r.formFactor==='DESKTOP'&&r.metric===mn); if(s.length){ cur=s[s.length-1]; src='homepage'; anyFallback=true; } }
+    if(!cur) return '<div class="dcap dc-none"><div class="dk">'+mname(mn)+' &middot; desktop</div><div class="dv">no data</div></div>';
+    anyData=true;
+    const c=rcls(cur.rating);
+    return '<div class="dcap dc-'+c+'"><div class="dk">'+mname(mn)+' &middot; desktop &middot; '+src+'</div><div class="dv">'+fmt(mn,cur.p75)+'</div><div class="dr">'+cur.rating+'</div></div>';
+  }).join('');
+  if(!anyData) return '';
+  const note = anyFallback
+    ? 'Whole-site desktop isn\u2019t published by CrUX for Indriya (desktop is a minority of real-user traffic), so desktop is shown at homepage level. The mobile tiles above are the whole-site figure Google ranks on \u2014 note the two are different scopes.'
+    : 'Whole-site desktop, real users.';
+  return '<div class="dcaps-wrap"><div class="dcaps-head">Desktop (secondary)</div><div class="dcaps">'+caps+'</div><div class="dcaps-note">'+note+'</div></div>';
 }
 
 /* ---------------- EXECUTIVE SUMMARY ---------------- */
@@ -167,57 +225,52 @@ function buildExec(field, lab){
   const host=document.getElementById('execSummary');
   const frows=field.rows||[], lrows=lab.rows||[];
   if(!frows.length && !lrows.length){
-    host.innerHTML='<div class="verdict v-none"><h2>No data yet</h2><p>Run the two workflows from the Actions tab, then reload. The summary appears once data comes in.</p></div>';
+    host.innerHTML='<div class="verdict v-none"><h2>No data yet</h2><p>Run the two workflows from the Actions tab, then reload.</p></div>';
     return;
   }
 
-  // whole-site origin, mobile (PHONE) -- the headline Core Web Vitals
-  const originVal = (frows.find(r=>r.kind==='Origin')||{}).target;
+  const originVal=(frows.find(r=>r.kind==='Origin')||{}).target;
   const heroMetrics=['LCP','INP','CLS'];
-  const heroes = heroMetrics.map(mn=>{
-    const cur = originVal ? latest(frows, r=>r.target===originVal && r.formFactor==='PHONE' && r.metric===mn) : null;
-    const pv  = originVal ? prev(frows,  r=>r.target===originVal && r.formFactor==='PHONE' && r.metric===mn) : null;
-    return {metric:mn, cur, pv};
-  });
+  const heroes=heroMetrics.map(mn=>({metric:mn,
+    s: originVal? seriesOf(frows, r=>r.target===originVal&&r.formFactor==='PHONE'&&r.metric===mn):[] }));
+  const homepageVal=(frows.find(r=>r.kind==='Homepage')||{}).target;
 
-  // verdict from the three hero ratings
+  // verdict from latest hero ratings
   let worst='none', have=false;
-  heroes.forEach(h=>{ if(h.cur){ have=true; const c=rcls(h.cur.rating);
+  heroes.forEach(h=>{ if(h.s.length){ have=true; const c=rcls(h.s[h.s.length-1].rating);
     if(c==='poor') worst='poor'; else if(c==='ni'&&worst!=='poor') worst='ni'; else if(c==='good'&&worst==='none') worst='good'; }});
-  let vClass, vTitle, vMsg;
-  if(!have){ vClass='v-none'; vTitle='Whole-site data pending'; vMsg='No real-user data for the whole-site origin yet (it can take a few days after first run, or the origin form may be www vs non-www). Lab results below are available immediately.'; }
+  let vClass,vTitle,vMsg;
+  if(!have){ vClass='v-none'; vTitle='Whole-site data pending'; vMsg='No real-user data for the whole-site origin yet (can take a few days after first run, or the origin may be www vs non-www). Lab results below are available immediately.'; }
   else if(worst==='poor'){ vClass='v-poor'; vTitle='Needs urgent attention'; vMsg='At least one Core Web Vital is failing for real users across the whole site. See what needs attention below.'; }
-  else if(worst==='ni'){ vClass='v-ni'; vTitle='Some improvement needed'; vMsg='Core Web Vitals are not all in the green for real users. A few metrics are borderline \u2014 details below.'; }
+  else if(worst==='ni'){ vClass='v-ni'; vTitle='Some improvement needed'; vMsg='Core Web Vitals are not all in the green for real users. A few metrics are borderline.'; }
   else { vClass='v-good'; vTitle='Core Web Vitals passing'; vMsg='Whole-site Core Web Vitals are in the good range for real users on mobile.'; }
 
-  // hero tiles
-  const heroHtml = heroes.map(h=>{
-    if(!h.cur) return '<div class="hero hl-none"><div class="k">'+h.metric+' &middot; whole site, mobile</div><div class="v">no data</div><div class="r">&mdash;</div></div>';
-    const c=rcls(h.cur.rating);
+  const heroHtml=heroes.map(h=>{
+    if(!h.s.length) return '<div class="hero hl-none"><div class="k">'+mname(h.metric)+' &middot; whole site</div><div class="v">no data</div><div class="r">&mdash; mobile</div></div>';
+    const cur=h.s[h.s.length-1], first=h.s[0], c=rcls(cur.rating);
     let trend='';
-    if(h.pv){
-      const d=h.cur.p75-h.pv.p75;
-      if(Math.abs(d) > (h.metric==='CLS'?0.01:50)){
-        const better = d<0; // lower is better for all three
-        trend='<div class="trend">'+(better?'\u25be improving':'\u25b4 worsening')+' vs last period ('+fmt(h.metric,h.pv.p75)+' \u2192 '+fmt(h.metric,h.cur.p75)+')</div>';
-      } else trend='<div class="trend">stable vs last period</div>';
+    if(h.s.length>=2){
+      const d=cur.p75-first.p75, meaningful=(h.metric==='CLS')? Math.abs(d)>0.02 : Math.abs(d) > first.p75*0.10;
+      const mo=monthsBetween(first.date,cur.date), span='over ~'+mo+' month'+(mo>1?'s':'');
+      const vals='('+fmt(h.metric,first.p75)+' \u2192 '+fmt(h.metric,cur.p75)+')';
+      if(bandRank(cur.rating)>bandRank(first.rating)) trend='<span class="cross">\u26a0 '+first.rating+' \u2192 '+cur.rating+' '+span+'</span> '+vals;
+      else if(bandRank(cur.rating)<bandRank(first.rating)) trend='recovered: '+first.rating+' \u2192 '+cur.rating+' '+span+' '+vals;
+      else if(!meaningful) trend='stable '+span;
+      else trend=(d<0?'\u25be improving':'\u25b4 worsening')+' '+span+' '+vals;
     }
-    return '<div class="hero hl-'+c+'"><div class="k">'+h.metric+' &middot; whole site, mobile</div><div class="v">'+fmt(h.metric,h.cur.p75)+'</div><div class="r">'+h.cur.rating+'</div>'+trend+'</div>';
+    return '<div class="hero hl-'+c+'"><div class="k">'+mname(h.metric)+' &middot; whole site</div><div class="v">'+fmt(h.metric,cur.p75)+'</div><div class="r">'+cur.rating+' &middot; mobile</div>'+(trend?'<div class="trend">'+trend+'</div>':'')+'</div>';
   }).join('');
 
-  // what needs attention: latest NI/Poor across field + lab
-  const items=[];
-  const seen=new Set();
+  // what needs attention (unchanged logic): latest NI/Poor across field+lab
+  const items=[], seen=new Set();
   function addFrom(rows, valKey, dimKey, src){
     const keys=[...new Set(rows.map(r=>r.target+'|'+r.metric+'|'+r[dimKey]))];
     keys.forEach(k=>{
       const [tg,mt,dim]=k.split('|');
-      const row=latest(rows, r=>r.target===tg && r.metric===mt && r[dimKey]===dim);
-      if(!row||!row.rating||row.rating==='Good') return;
-      if(mt==='PerfScore') return; // score is a summary, not an issue to list
-      const id=labelOf(row)+'|'+mt+'|'+dim;
-      if(seen.has(id)) return; seen.add(id);
-      items.push({label:labelOf(row), metric:mt, dim, val:row[valKey], rating:row.rating, src, rank:row.rating==='Poor'?0:1});
+      const row=latest(rows, r=>r.target===tg&&r.metric===mt&&r[dimKey]===dim);
+      if(!row||!row.rating||row.rating==='Good'||mt==='PerfScore') return;
+      const id=labelOf(row)+'|'+mt+'|'+dim; if(seen.has(id)) return; seen.add(id);
+      items.push({label:labelOf(row),metric:mt,dim,val:row[valKey],rating:row.rating,src,rank:row.rating==='Poor'?0:1});
     });
   }
   addFrom(frows,'p75','formFactor','Field');
@@ -227,109 +280,157 @@ function buildExec(field, lab){
   let attHtml='';
   if(top.length){
     attHtml='<div class="attention"><h3>What needs attention</h3>'+
-      top.map(i=>'<div class="att-item">'+pill(i.rating)+
-        '<span class="att-name">'+i.label+' &middot; '+i.metric+' <span style="color:#98a2b3">('+i.src+', '+i.dim+')</span></span>'+
-        '<span class="att-val" style="color:'+rcolor(i.rating)+'">'+fmt(i.metric,i.val)+'</span></div>').join('')+
-      '</div>';
+      top.map(i=>'<div class="att-item">'+pill(i.rating)+'<span class="att-name">'+i.label+' &middot; '+mname(i.metric)+' <span style="color:#98a2b3">('+i.src+', '+i.dim+')</span></span><span class="att-val" style="color:'+rcolor(i.rating)+'">'+fmt(i.metric,i.val)+'</span></div>').join('')+'</div>';
   } else if(have){
     attHtml='<div class="attention"><h3>What needs attention</h3><div class="att-item" style="color:var(--good)">Nothing failing right now \u2014 all tracked metrics are in the good range.</div></div>';
   }
 
-  // spike alert: lab latest much worse than previous reading
+  // SPIKE detector -- only stable signals (TBT, PerfScore), rolling-median baseline,
+  // two consecutive worse readings, no absolute values in the message.
   const spikes=[];
-  const labKeys=[...new Set(lrows.map(r=>r.target+'|'+r.metric+'|'+r.strategy))];
-  labKeys.forEach(k=>{
+  const SPIKE_METRICS=['TBT','PerfScore'];
+  const keys=[...new Set(lrows.filter(r=>SPIKE_METRICS.includes(r.metric)).map(r=>r.target+'|'+r.metric+'|'+r.strategy))];
+  keys.forEach(k=>{
     const [tg,mt,st]=k.split('|');
-    if(mt==='PerfScore'||mt==='CLS') return;
-    const cur=latest(lrows, r=>r.target===tg&&r.metric===mt&&r.strategy===st);
-    const pv =prev(lrows,  r=>r.target===tg&&r.metric===mt&&r.strategy===st);
-    if(!cur||!pv) return;
-    if(cur.value >= pv.value*1.30 && cur.value-pv.value > 300){
-      spikes.push({label:cur.label||tg, metric:mt, st, from:pv.value, to:cur.value});
+    const ser=seriesOf(lrows, r=>r.target===tg&&r.metric===mt&&r.strategy===st);
+    if(ser.length<4) return;
+    const last=ser[ser.length-1], prev1=ser[ser.length-2];
+    const base=median(ser.slice(0,ser.length-2).map(r=>r.value));
+    if(base==null||base<=0) return;
+    const lbl=(ser[0].label)||tg;
+    if(mt==='TBT'){
+      if(last.value>=base*1.5 && prev1.value>=base*1.5 && bandRank(last.rating)>=1)
+        spikes.push(lbl+' ('+st+'): main-thread work (TBT) sustained above its recent baseline');
+    } else { // PerfScore, lower is worse
+      if(last.value<=base-15 && prev1.value<=base-15 && last.rating==='Poor')
+        spikes.push(lbl+' ('+st+'): performance score dropped below its recent baseline');
     }
   });
-  let spikeHtml='';
-  if(spikes.length){
-    spikeHtml='<div class="spike"><b>\u26a0 Possible regression:</b> '+
-      spikes.slice(0,3).map(s=>s.label+' ('+s.st+') '+s.metric+' jumped '+fmt(s.metric,s.from)+' \u2192 '+fmt(s.metric,s.to)).join('; ')+
-      '. Check whether a recent change went live.</div>';
-  }
+  const spikeHtml = spikes.length
+    ? '<div class="spike"><b>\u26a0 Possible regression:</b> '+spikes.slice(0,3).join('; ')+'. Check whether a recent change went live.</div>'
+    : '';
 
-  host.innerHTML =
-    '<div class="verdict '+vClass+'"><h2>'+vTitle+'</h2><p>'+vMsg+'</p></div>'+
-    '<div class="heroes">'+heroHtml+'</div>'+
-    spikeHtml + attHtml;
+  const desktopHtml = buildDesktopCaps(frows, originVal, homepageVal);
+  host.innerHTML='<div class="verdict '+vClass+'"><h2>'+vTitle+'</h2><p>'+vMsg+'</p></div><div class="heroes">'+heroHtml+'</div><div class="heronote">Headline tiles = whole-site <b>mobile</b> (the version Google ranks on).</div>'+desktopHtml+spikeHtml+attHtml;
 }
 
 /* ---------------- CHART CARDS ---------------- */
-function buildCard(grid, metric, seriesList, xLabels){
+function buildCard(grid, metric, seriesList, xLabels, opts){
+  opts=opts||{};
   const latestPts=seriesList.map(s=>s.points[s.points.length-1]).filter(Boolean);
-  // worst rating among series drives the card accent
-  let worst='';
-  latestPts.forEach(p=>{ const c=rcls(p.rating); if(c==='poor')worst='poor'; else if(c==='ni'&&worst!=='poor')worst='ni'; else if(c==='good'&&!worst)worst='good'; });
-  const card=document.createElement('div'); card.className='card'+(worst?(' s-'+worst):'');
-  const badge = latestPts.length ? pill(latestPts[0].rating) : '';
-  const latestTxt=latestPts.map((p,i)=>seriesList[i].name+': <b>'+fmt(metric,p.y)+'</b>').join(' &nbsp; ');
+  let worstCls='', worstRating='Good';
+  latestPts.forEach(p=>{ const c=rcls(p.rating); if(c==='poor')worstCls='poor'; else if(c==='ni'&&worstCls!=='poor')worstCls='ni'; else if(c==='good'&&!worstCls)worstCls='good';
+    if(bandRank(p.rating)>bandRank(worstRating)) worstRating=p.rating; });
+  const card=document.createElement('div');
+  card.className='card'+(worstCls?(' s-'+worstCls):'')+(opts.lab?' lab':'');
+  const badge=latestPts.length? pill(worstRating):'';
   const tt=T[metric]||{};
-  const targetTxt = metric==='PerfScore' ? 'Good \u2265 90'
-                  : (tt.good!=null ? 'Good \u2264 '+fmtT(metric,tt.good) : '');
-  card.innerHTML='<h3><span>'+metric+'</span>'+badge+'</h3>'+(targetTxt?'<div class="target">'+targetTxt+'</div>':'')+'<div class="latest">'+(latestTxt||'&mdash;')+'</div><canvas></canvas>';
+  let targetTxt = metric==='PerfScore'?'Good \u2265 90':(tt.good!=null?'Good \u2264 '+fmtT(metric,tt.good):'');
+  if(metric==='TBT' && targetTxt) targetTxt+=' &middot; lab stand-in for INP';
+  if(metric==='INP' && targetTxt) targetTxt+=' &middot; real users only';
+  const latestTxt=latestPts.map((p,i)=>{
+    const nm=seriesList[i].name;
+    return '<span style="color:'+(DEVICE[nm]||'#333')+';font-weight:600">'+nm+'</span>: <b style="color:'+rcolor(p.rating)+'">'+fmt(metric,p.y)+'</b>';
+  }).join(' &nbsp; ');
+  card.innerHTML='<h3><span>'+mname(metric)+'</span>'+badge+'</h3>'+(targetTxt?'<div class="target">'+targetTxt+'</div>':'')+'<div class="latest">'+(latestTxt||'&mdash;')+'</div><canvas></canvas>';
   grid.appendChild(card);
 
-  const t=T[metric]||{};
   const datasets=seriesList.map(s=>({
     label:s.name, data:s.points.map(p=>({x:p.x,y:p.y})),
-    borderColor:s.points.length?rcolor(s.points[s.points.length-1].rating):COL.ni,
-    backgroundColor:'transparent', borderWidth:2, pointRadius:2, tension:.25, spanGaps:true
+    borderColor:DEVICE[s.name]||'#334155', backgroundColor:DEVICE[s.name]||'#334155',
+    borderWidth:(s.name==='PHONE'||s.name==='mobile')?2.5:2, pointRadius:2, tension:.25, spanGaps:true, fill:false
   }));
-  if(metric!=='PerfScore' && t.good!=null){
-    datasets.push({label:'good',data:xLabels.map(x=>({x,y:t.good})),borderColor:COL.good,borderDash:[4,4],borderWidth:1,pointRadius:0});
-    datasets.push({label:'poor',data:xLabels.map(x=>({x,y:t.poor})),borderColor:COL.poor,borderDash:[4,4],borderWidth:1,pointRadius:0});
+  if(metric!=='PerfScore' && tt.good!=null){
+    datasets.push({label:'good',data:xLabels.map(x=>({x,y:tt.good})),borderColor:COL.good,borderDash:[4,4],borderWidth:1,pointRadius:0,fill:false});
+    datasets.push({label:'poor',data:xLabels.map(x=>({x,y:tt.poor})),borderColor:COL.poor,borderDash:[4,4],borderWidth:1,pointRadius:0,fill:false});
   }
   new Chart(card.querySelector('canvas'),{
     type:'line', data:{datasets},
     options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:seriesList.length>1,labels:{boxWidth:10,font:{size:10},filter:i=>i.text!=='good'&&i.text!=='poor'}}},
+      plugins:{legend:{display:seriesList.length>1,labels:{usePointStyle:true,pointStyle:'circle',boxWidth:8,font:{size:10},filter:i=>i.text!=='good'&&i.text!=='poor'}}},
       scales:{x:{type:'category',labels:xLabels,ticks:{font:{size:9},maxRotation:0,autoSkip:true,maxTicksLimit:6},grid:{display:false}},
-              y:{ticks:{font:{size:10}},grid:{color:'#f0f1f4'},beginAtZero:metric==='CLS'}}}
+              y:{ticks:{font:{size:10},callback:function(v){ const u=(T[metric]&&T[metric].unit)||''; if(u!=='ms') return v; return (this.max||0)>=3000 ? (v/1000)+'s' : v; }},grid:{color:'#f0f1f4'},beginAtZero:metric==='CLS'}}}
   });
 }
 
-function renderLayer(data, gridId, selId, order, valKey, dimKey, dims){
+function renderLayer(data, gridId, selId, coreOrder, diagOrder, valKey, dimKey, dims, isLab, afterDraw){
   const rows=data.rows||[];
   const grid=document.getElementById(gridId), sel=document.getElementById(selId);
-  // unique targets, preserve input order, show friendly label
-  const targets=[]; const byT={};
+  const targets=[], byT={};
   rows.forEach(r=>{ if(!byT[r.target]){ byT[r.target]=labelOf(r); targets.push(r.target); }});
   if(!targets.length){ grid.innerHTML='<div class="empty">No data yet. Run the workflow, then reload.</div>'; sel.style.display='none'; return; }
   sel.innerHTML=targets.map(t=>'<option value="'+t+'">'+byT[t]+'</option>').join('');
   function draw(){
+    const sec=grid.closest('section'); const oldDiag=sec.querySelector('.diag-wrap'); if(oldDiag) oldDiag.remove();
     grid.innerHTML='';
     const target=sel.value;
     const sub=rows.filter(r=>r.target===target);
     const dates=[...new Set(sub.map(r=>r.date))].sort();
-    order.forEach(metric=>{
+    function drawInto(container, metric){
       const seriesList=[];
       dims.forEach(dim=>{
-        const pts=dates.map(d=>{
-          const row=sub.find(r=>r.date===d && r[dimKey]===dim && r.metric===metric);
-          return row?{x:d,y:row[valKey],rating:row.rating}:{x:d,y:null,rating:''};
-        }).filter(p=>p.y!=null);
+        const pts=dates.map(d=>{ const row=sub.find(r=>r.date===d&&r[dimKey]===dim&&r.metric===metric); return row?{x:d,y:row[valKey],rating:row.rating}:{x:d,y:null,rating:''}; }).filter(p=>p.y!=null);
         if(pts.length) seriesList.push({name:dim,points:pts});
       });
-      if(seriesList.length) buildCard(grid,metric,seriesList,dates);
-    });
-    if(!grid.children.length) grid.innerHTML='<div class="empty">No metrics for this page yet.</div>';
+      if(seriesList.length){ buildCard(container,metric,seriesList,dates,{lab:isLab}); return true; }
+      return false;
+    }
+    coreOrder.forEach(m=>drawInto(grid,m));
+    const diagGrid=document.createElement('div'); diagGrid.className='grid diag';
+    diagOrder.forEach(m=>drawInto(diagGrid,m));
+    if(diagGrid.children.length){
+      const wrap=document.createElement('div'); wrap.className='diag-wrap';
+      const h=document.createElement('div'); h.className='diag-head'; h.textContent='Diagnostics (supporting metrics)';
+      wrap.appendChild(h); wrap.appendChild(diagGrid); grid.after(wrap);
+    }
+    if(!grid.children.length && !diagGrid.children.length) grid.innerHTML='<div class="empty">No metrics for this page yet.</div>';
+    if(typeof afterDraw==='function') afterDraw(target);
   }
   sel.onchange=draw; draw();
 }
 
+/* ---------------- INLINE TECH DETAILS (collapsible) ---------------- */
+function kib(b){ return b==null?null:Math.round(b/1024).toLocaleString()+' KiB'; }
+function saveTag(o){ if(o.savings_bytes) return kib(o.savings_bytes); if(o.savings_ms) return Math.round(o.savings_ms)+' ms'; return ''; }
+function techDevBlock(dev,label,color){
+  if(!dev) return '';
+  let h='<div class="tdev"><div class="tdevhead" style="color:'+color+'">'+label+'</div>';
+  if(dev.lcp_element) h+='<div class="trow"><span class="tk">LCP element:</span> <span class="tmono">'+dev.lcp_element+'</span></div>';
+  if(dev.cls_elements&&dev.cls_elements.length){ h+='<div class="trow"><span class="tk">Layout-shift elements:</span></div>';
+    dev.cls_elements.forEach(c=>h+='<div class="trow">&bull; <span class="tmono">'+c.label+'</span>'+(c.score!=null?' <span style="color:var(--poor);font-weight:600">shift '+c.score+'</span>':'')+'</div>'); }
+  if(dev.opps&&dev.opps.length){ h+='<div class="trow" style="margin-top:5px"><span class="tk">Top opportunities:</span></div><ul class="topps">';
+    dev.opps.forEach(o=>{ const s=saveTag(o); h+='<li><span>'+o.title+(o.detail?' <span class="tk">&mdash; '+o.detail+'</span>':'')+'</span>'+(s?'<span class="tsave">'+s+'</span>':'')+'</li>'; });
+    h+='</ul>'; }
+  return h+'</div>';
+}
+function renderLabTech(tech, target){
+  const host=document.getElementById('labTech'); if(!host) return;
+  const p=(tech&&tech.lab&&tech.lab[target]);
+  if(!p){ host.innerHTML='<details class="techbox"><summary>Tech details for this page (developer view)</summary><div class="tinner"><div class="tempty">No tech data for this page yet. Run the <b>Refresh lab</b> workflow to populate.</div></div></details>'; return; }
+  host.innerHTML='<details class="techbox"><summary>Tech details for this page (developer view)</summary><div class="tinner">'+techDevBlock(p.mobile,'Mobile','var(--mobile)')+techDevBlock(p.desktop,'Desktop','var(--desktop)')+'</div></details>';
+}
+function renderFieldTech(tech, target){
+  const host=document.getElementById('fieldTech'); if(!host) return;
+  const p=(tech&&tech.field&&tech.field[target]);
+  if(!p){ host.innerHTML=''; return; }
+  const dims=Object.keys(p).filter(k=>k!=='label'&&k!=='kind');
+  let inner='';
+  dims.forEach(dev=>{ const metrics=p[dev]; Object.keys(metrics).forEach(m=>{ const d=metrics[m];
+    inner+='<div class="distrow"><div class="dlbl"><span>'+m+' <span class="tk">('+dev.toLowerCase()+')</span></span><span class="tk">'+d.good+'% good</span></div>'+
+      '<div class="dbar"><div style="width:'+d.good+'%;background:var(--good)"></div><div style="width:'+d.ni+'%;background:var(--ni)"></div><div style="width:'+d.poor+'%;background:var(--poor)"></div></div>'+
+      '<div class="tk" style="font-size:10.5px;margin-top:2px">'+d.good+'% good &middot; '+d.ni+'% NI &middot; '+d.poor+'% poor</div></div>'; }); });
+  if(!inner){ host.innerHTML=''; return; }
+  host.innerHTML='<details class="techbox"><summary>Real-user severity split for this page (how many users are affected)</summary><div class="tinner">'+inner+'</div></details>';
+}
+
 (async function(){
-  const [field,lab]=await Promise.all([load('field_data.json'),load('lab_data.json')]);
+  const [field,lab,tech]=await Promise.all([load('field_data.json'),load('lab_data.json'),load('tech_data.json')]);
   document.getElementById('updated').textContent='Field pulled: '+(field.pulledOn||'?')+'   \u00b7   Lab pulled: '+(lab.pulledOn||'?');
+  const techData=tech||{};
+  if(techData.sample){ const b=document.getElementById('techSample'); if(b) b.innerHTML='<div class="lab-caveat" style="background:#fff5e6;border-color:#f0d9a8;color:#7a5200">Tech-detail sections are showing <b>sample data</b> for now. Run the <b>Refresh lab</b> and <b>Refresh field</b> workflows (Actions tab) to populate them with live numbers.</div>'; }
   buildExec(field,lab);
-  renderLayer(field,'fieldGrid','fieldTarget',FIELD_ORDER,'p75','formFactor',['PHONE','DESKTOP']);
-  renderLayer(lab,'labGrid','labTarget',LAB_ORDER,'value','strategy',['mobile','desktop']);
+  renderLayer(field,'fieldGrid','fieldTarget',CORE.field,DIAG.field,'p75','formFactor',['PHONE','DESKTOP'],false,t=>renderFieldTech(techData,t));
+  renderLayer(lab,'labGrid','labTarget',CORE.lab,DIAG.lab,'value','strategy',['mobile','desktop'],true,t=>renderLabTech(techData,t));
 })();
 </script>
 </body>

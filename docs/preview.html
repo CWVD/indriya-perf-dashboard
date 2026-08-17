@@ -121,7 +121,6 @@
 
   <div id="execSummary"></div>
   <div id="techSample"></div>
-  <div style="font-size:12.5px;margin:2px 0 10px"><a href="tech.html" style="color:var(--navy)">Open the full Tech Details view &rarr;</a> <span style="color:var(--muted)">(developer punch-list &amp; real-user severity)</span></div>
 
   <div class="legend">
     <span><span class="dot" style="background:var(--good)"></span>Good</span>
@@ -407,7 +406,7 @@ function techDevBlock(dev,label,color){
 function renderLabTech(tech, target){
   const host=document.getElementById('labTech'); if(!host) return;
   const p=(tech&&tech.lab&&tech.lab[target]);
-  if(!p){ host.innerHTML='<details class="techbox"><summary>Tech details for this page (developer view)</summary><div class="tinner"><div class="tempty">No tech data for this page yet. Run the Tech refresh workflow.</div></div></details>'; return; }
+  if(!p){ host.innerHTML='<details class="techbox"><summary>Tech details for this page (developer view)</summary><div class="tinner"><div class="tempty">No tech data for this page yet. Run the <b>Refresh lab</b> workflow to populate.</div></div></details>'; return; }
   host.innerHTML='<details class="techbox"><summary>Tech details for this page (developer view)</summary><div class="tinner">'+techDevBlock(p.mobile,'Mobile','var(--mobile)')+techDevBlock(p.desktop,'Desktop','var(--desktop)')+'</div></details>';
 }
 function renderFieldTech(tech, target){
@@ -428,7 +427,7 @@ function renderFieldTech(tech, target){
   const [field,lab,tech]=await Promise.all([load('field_data.json'),load('lab_data.json'),load('tech_data.json')]);
   document.getElementById('updated').textContent='Field pulled: '+(field.pulledOn||'?')+'   \u00b7   Lab pulled: '+(lab.pulledOn||'?');
   const techData=tech||{};
-  if(techData.sample){ const b=document.getElementById('techSample'); if(b) b.innerHTML='<div class="lab-caveat" style="background:#fff5e6;border-color:#f0d9a8;color:#7a5200">Tech-detail sections are showing <b>sample data</b> for now. Run the Tech refresh workflow to populate them with live numbers.</div>'; }
+  if(techData.sample){ const b=document.getElementById('techSample'); if(b) b.innerHTML='<div class="lab-caveat" style="background:#fff5e6;border-color:#f0d9a8;color:#7a5200">Tech-detail sections are showing <b>sample data</b> for now. Run the <b>Refresh lab</b> and <b>Refresh field</b> workflows (Actions tab) to populate them with live numbers.</div>'; }
   buildExec(field,lab);
   renderLayer(field,'fieldGrid','fieldTarget',CORE.field,DIAG.field,'p75','formFactor',['PHONE','DESKTOP'],false,t=>renderFieldTech(techData,t));
   renderLayer(lab,'labGrid','labTarget',CORE.lab,DIAG.lab,'value','strategy',['mobile','desktop'],true,t=>renderLabTech(techData,t));
