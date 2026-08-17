@@ -90,6 +90,25 @@
   .empty{color:var(--muted);font-size:13px;padding:14px;background:var(--panel);border-radius:8px}
   footer{padding:18px 26px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:36px}
   canvas{max-height:170px}
+  .techbox{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+  .techbox summary{cursor:pointer;padding:11px 15px;font-size:13px;font-weight:600;color:var(--navy);list-style:none}
+  .techbox summary::-webkit-details-marker{display:none}
+  .techbox summary:before{content:'\25b8  ';color:var(--gold)}
+  .techbox[open] summary:before{content:'\25be  '}
+  .tinner{padding:4px 16px 14px}
+  .tdev{margin-top:10px;padding-top:9px;border-top:1px solid #eef0f3}
+  .tdevhead{font-size:12px;font-weight:700;margin-bottom:5px}
+  .trow{font-size:12.5px;margin:2px 0}
+  .tk{color:var(--muted)}
+  .tmono{font-family:Consolas,monospace;font-size:11.5px;background:#eef0f3;padding:1px 5px;border-radius:4px;color:#b02a37}
+  ul.topps{margin:5px 0 0;padding:0;list-style:none}
+  ul.topps li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-top:1px solid #f1f2f4;font-size:12.5px}
+  ul.topps li:first-child{border-top:none}
+  .tsave{font-weight:700;white-space:nowrap;color:var(--poor);font-variant-numeric:tabular-nums}
+  .distrow{margin:7px 0}
+  .distrow .dlbl{font-size:12px;display:flex;justify-content:space-between;margin-bottom:3px}
+  .dbar{display:flex;height:13px;border-radius:4px;overflow:hidden;border:1px solid #e9eaee}
+  .tempty{color:var(--muted);font-size:12.5px;padding:6px 0}
 </style>
 </head>
 <body>
@@ -101,6 +120,8 @@
 <div class="wrap">
 
   <div id="execSummary"></div>
+  <div id="techSample"></div>
+  <div style="font-size:12.5px;margin:2px 0 10px"><a href="tech.html" style="color:var(--navy)">Open the full Tech Details view &rarr;</a> <span style="color:var(--muted)">(developer punch-list &amp; real-user severity)</span></div>
 
   <div class="legend">
     <span><span class="dot" style="background:var(--good)"></span>Good</span>
@@ -116,6 +137,7 @@
     <p class="note">28-day real-user p75 from CrUX. The whole-site figure is the headline; product/store pages aren't here because they rarely have enough traffic (they're covered under Lab). Refreshes weekly.</p>
     <div class="controls"><label>Page:&nbsp;</label><select id="fieldTarget"></select></div>
     <div id="fieldGrid" class="grid"></div>
+    <div id="fieldTech"></div>
   </section>
 
   <!-- LAB -->
@@ -125,6 +147,7 @@
     <div class="lab-caveat"><b>Read lab as a tripwire, not a measurement.</b> These are throttled lab simulations &mdash; watch the <b>direction</b> and the <b>pass/fail colour</b>, not the absolute number. A lab LCP of 50&thinsp;s does not mean real users wait 50&thinsp;s; the whole-site Field figures above are the real-user truth.</div>
     <div class="controls"><label>Page:&nbsp;</label><select id="labTarget"></select></div>
     <div id="labGrid" class="grid"></div>
+    <div id="labTech"></div>
   </section>
 </div>
 
@@ -331,7 +354,7 @@ function buildCard(grid, metric, seriesList, xLabels, opts){
   });
 }
 
-function renderLayer(data, gridId, selId, coreOrder, diagOrder, valKey, dimKey, dims, isLab){
+function renderLayer(data, gridId, selId, coreOrder, diagOrder, valKey, dimKey, dims, isLab, afterDraw){
   const rows=data.rows||[];
   const grid=document.getElementById(gridId), sel=document.getElementById(selId);
   const targets=[], byT={};
@@ -362,16 +385,53 @@ function renderLayer(data, gridId, selId, coreOrder, diagOrder, valKey, dimKey, 
       wrap.appendChild(h); wrap.appendChild(diagGrid); grid.after(wrap);
     }
     if(!grid.children.length && !diagGrid.children.length) grid.innerHTML='<div class="empty">No metrics for this page yet.</div>';
+    if(typeof afterDraw==='function') afterDraw(target);
   }
   sel.onchange=draw; draw();
 }
 
+/* ---------------- INLINE TECH DETAILS (collapsible) ---------------- */
+function kib(b){ return b==null?null:Math.round(b/1024).toLocaleString()+' KiB'; }
+function saveTag(o){ if(o.savings_bytes) return kib(o.savings_bytes); if(o.savings_ms) return Math.round(o.savings_ms)+' ms'; return ''; }
+function techDevBlock(dev,label,color){
+  if(!dev) return '';
+  let h='<div class="tdev"><div class="tdevhead" style="color:'+color+'">'+label+'</div>';
+  if(dev.lcp_element) h+='<div class="trow"><span class="tk">LCP element:</span> <span class="tmono">'+dev.lcp_element+'</span></div>';
+  if(dev.cls_elements&&dev.cls_elements.length){ h+='<div class="trow"><span class="tk">Layout-shift elements:</span></div>';
+    dev.cls_elements.forEach(c=>h+='<div class="trow">&bull; <span class="tmono">'+c.label+'</span>'+(c.score!=null?' <span style="color:var(--poor);font-weight:600">shift '+c.score+'</span>':'')+'</div>'); }
+  if(dev.opps&&dev.opps.length){ h+='<div class="trow" style="margin-top:5px"><span class="tk">Top opportunities:</span></div><ul class="topps">';
+    dev.opps.forEach(o=>{ const s=saveTag(o); h+='<li><span>'+o.title+(o.detail?' <span class="tk">&mdash; '+o.detail+'</span>':'')+'</span>'+(s?'<span class="tsave">'+s+'</span>':'')+'</li>'; });
+    h+='</ul>'; }
+  return h+'</div>';
+}
+function renderLabTech(tech, target){
+  const host=document.getElementById('labTech'); if(!host) return;
+  const p=(tech&&tech.lab&&tech.lab[target]);
+  if(!p){ host.innerHTML='<details class="techbox"><summary>Tech details for this page (developer view)</summary><div class="tinner"><div class="tempty">No tech data for this page yet. Run the Tech refresh workflow.</div></div></details>'; return; }
+  host.innerHTML='<details class="techbox"><summary>Tech details for this page (developer view)</summary><div class="tinner">'+techDevBlock(p.mobile,'Mobile','var(--mobile)')+techDevBlock(p.desktop,'Desktop','var(--desktop)')+'</div></details>';
+}
+function renderFieldTech(tech, target){
+  const host=document.getElementById('fieldTech'); if(!host) return;
+  const p=(tech&&tech.field&&tech.field[target]);
+  if(!p){ host.innerHTML=''; return; }
+  const dims=Object.keys(p).filter(k=>k!=='label'&&k!=='kind');
+  let inner='';
+  dims.forEach(dev=>{ const metrics=p[dev]; Object.keys(metrics).forEach(m=>{ const d=metrics[m];
+    inner+='<div class="distrow"><div class="dlbl"><span>'+m+' <span class="tk">('+dev.toLowerCase()+')</span></span><span class="tk">'+d.good+'% good</span></div>'+
+      '<div class="dbar"><div style="width:'+d.good+'%;background:var(--good)"></div><div style="width:'+d.ni+'%;background:var(--ni)"></div><div style="width:'+d.poor+'%;background:var(--poor)"></div></div>'+
+      '<div class="tk" style="font-size:10.5px;margin-top:2px">'+d.good+'% good &middot; '+d.ni+'% NI &middot; '+d.poor+'% poor</div></div>'; }); });
+  if(!inner){ host.innerHTML=''; return; }
+  host.innerHTML='<details class="techbox"><summary>Real-user severity split for this page (how many users are affected)</summary><div class="tinner">'+inner+'</div></details>';
+}
+
 (async function(){
-  const [field,lab]=await Promise.all([load('field_data.json'),load('lab_data.json')]);
+  const [field,lab,tech]=await Promise.all([load('field_data.json'),load('lab_data.json'),load('tech_data.json')]);
   document.getElementById('updated').textContent='Field pulled: '+(field.pulledOn||'?')+'   \u00b7   Lab pulled: '+(lab.pulledOn||'?');
+  const techData=tech||{};
+  if(techData.sample){ const b=document.getElementById('techSample'); if(b) b.innerHTML='<div class="lab-caveat" style="background:#fff5e6;border-color:#f0d9a8;color:#7a5200">Tech-detail sections are showing <b>sample data</b> for now. Run the Tech refresh workflow to populate them with live numbers.</div>'; }
   buildExec(field,lab);
-  renderLayer(field,'fieldGrid','fieldTarget',CORE.field,DIAG.field,'p75','formFactor',['PHONE','DESKTOP'],false);
-  renderLayer(lab,'labGrid','labTarget',CORE.lab,DIAG.lab,'value','strategy',['mobile','desktop'],true);
+  renderLayer(field,'fieldGrid','fieldTarget',CORE.field,DIAG.field,'p75','formFactor',['PHONE','DESKTOP'],false,t=>renderFieldTech(techData,t));
+  renderLayer(lab,'labGrid','labTarget',CORE.lab,DIAG.lab,'value','strategy',['mobile','desktop'],true,t=>renderLabTech(techData,t));
 })();
 </script>
 </body>

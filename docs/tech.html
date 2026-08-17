@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indriya Performance — Tech Details</title>
+<style>
+  :root{--ink:#1F2A44;--navy:#022E71;--gold:#9A6A2F;--good:#1a7f37;--ni:#b06a00;--poor:#c1121f;
+    --line:#e4e7ec;--muted:#667085;--bg:#fff;--panel:#f7f8fa;--mobile:#2563eb;--desktop:#9333ea;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.45;background:var(--bg)}
+  header{padding:18px 26px;border-bottom:3px solid var(--gold);background:var(--panel)}
+  h1{margin:0;font-size:19px;color:var(--navy)}
+  .sub{margin-top:4px;color:var(--muted);font-size:12.5px}
+  .back{font-size:12.5px;color:var(--navy);text-decoration:none}
+  .wrap{padding:20px 26px;max-width:1100px;margin:0 auto}
+  .sample{background:#fff5e6;border:1px solid #f0d9a8;border-radius:8px;padding:9px 13px;margin-bottom:16px;font-size:12.5px;color:#7a5200}
+  h2{font-size:15px;color:var(--navy);border-left:4px solid var(--gold);padding-left:9px;margin:26px 0 4px}
+  .note{color:var(--muted);font-size:12.5px;margin:0 0 14px;padding-left:13px}
+  .page{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+  .page h3{margin:0 0 2px;font-size:14px;color:var(--ink)}
+  .kind{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#fff;background:var(--navy);border-radius:20px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+  .dev{margin-top:12px;padding-top:10px;border-top:1px solid #f0f1f4}
+  .devhead{font-size:12px;font-weight:700;margin-bottom:6px}
+  .devhead.m{color:var(--mobile)} .devhead.d{color:var(--desktop)}
+  .row{font-size:12.5px;margin:3px 0}
+  .k{color:var(--muted)}
+  .mono{font-family:Consolas,monospace;font-size:11.5px;background:#f0f1f4;padding:1px 5px;border-radius:4px;color:#b02a37}
+  ul.opps{margin:6px 0 0;padding:0;list-style:none}
+  ul.opps li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:4px 0;border-top:1px solid #f4f5f7;font-size:12.5px}
+  ul.opps li:first-child{border-top:none}
+  .opp-t{flex:1}
+  .save{font-weight:700;white-space:nowrap;color:var(--poor);font-variant-numeric:tabular-nums}
+  .cls-el{font-size:12px;margin:2px 0}
+  .cls-score{color:var(--poor);font-weight:600}
+  .distgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .distcard{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .distcard h4{margin:0 0 8px;font-size:13px}
+  .distrow{margin:7px 0}
+  .distrow .lbl{font-size:12px;display:flex;justify-content:space-between;margin-bottom:3px}
+  .bar{display:flex;height:14px;border-radius:4px;overflow:hidden;border:1px solid #e9eaee}
+  .bg{background:var(--good)} .bn{background:var(--ni)} .bp{background:var(--poor)}
+  .barkey{font-size:10.5px;color:var(--muted);margin-top:3px}
+  .empty{color:var(--muted);font-size:13px;padding:14px;background:var(--panel);border-radius:8px}
+  footer{padding:16px 26px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Indriya Performance &mdash; Tech Details</h1>
+  <div class="sub" id="updated">Loading&hellip;</div>
+  <div class="sub"><a class="back" href="./">&larr; back to the main dashboard</a></div>
+</header>
+<div class="wrap">
+  <div id="sampleBanner"></div>
+
+  <h2>Lab diagnostics &mdash; the developer punch-list</h2>
+  <p class="note">Per page, from the daily PageSpeed test: the element driving LCP, the elements causing layout shift, and the biggest opportunities ranked by estimated saving. Lab-simulated &mdash; use for <b>what to fix</b>, not exact numbers.</p>
+  <div id="labDetails"></div>
+
+  <h2>Field distribution &mdash; real-user severity</h2>
+  <p class="note">The p75 headline hides how many users are affected. This shows the split of real users across Good / Needs-improvement / Poor for each metric &mdash; the true severity.</p>
+  <div id="fieldDist"></div>
+</div>
+<footer>Diagnostics from PageSpeed Insights + CrUX &middot; auto-refreshed by GitHub Actions.</footer>
+
+<script>
+const COLp={good:'#1a7f37',ni:'#b06a00',poor:'#c1121f'};
+async function load(p){ try{const r=await fetch(p+'?t='+Date.now());return await r.json();}catch(e){return null;} }
+function kib(bytes){ if(bytes==null) return null; return Math.round(bytes/1024).toLocaleString()+' KiB'; }
+function saveTag(o){ if(o.savings_bytes) return kib(o.savings_bytes); if(o.savings_ms) return Math.round(o.savings_ms)+' ms'; return ''; }
+
+function devBlock(dev, label, cls){
+  if(!dev) return '';
+  let h='<div class="dev"><div class="devhead '+cls+'">'+label+'</div>';
+  if(dev.lcp_element) h+='<div class="row"><span class="k">LCP element:</span> <span class="mono">'+dev.lcp_element+'</span></div>';
+  if(dev.cls_elements && dev.cls_elements.length){
+    h+='<div class="row"><span class="k">Layout-shift elements:</span></div>';
+    dev.cls_elements.forEach(c=>{ h+='<div class="cls-el">&bull; <span class="mono">'+c.label+'</span>'+(c.score!=null?' <span class="cls-score">shift '+c.score+'</span>':'')+'</div>'; });
+  }
+  if(dev.opps && dev.opps.length){
+    h+='<div class="row" style="margin-top:6px"><span class="k">Top opportunities:</span></div><ul class="opps">';
+    dev.opps.forEach(o=>{ const s=saveTag(o); h+='<li><span class="opp-t">'+o.title+(o.detail?' <span class="k">&mdash; '+o.detail+'</span>':'')+'</span>'+(s?'<span class="save">'+s+'</span>':'')+'</li>'; });
+    h+='</ul>';
+  }
+  return h+'</div>';
+}
+
+function renderLab(tech){
+  const host=document.getElementById('labDetails');
+  const lab=(tech&&tech.lab)||{};
+  const pages=Object.keys(lab);
+  if(!pages.length){ host.innerHTML='<div class="empty">No tech data yet. Run the Tech refresh workflow, then reload.</div>'; return; }
+  host.innerHTML=pages.map(url=>{
+    const p=lab[url];
+    return '<div class="page"><h3>'+(p.label||url)+'<span class="kind">'+(p.kind||'')+'</span></h3><div class="k" style="font-size:11.5px">'+url+'</div>'+
+      devBlock(p.mobile,'Mobile','m')+devBlock(p.desktop,'Desktop','d')+'</div>';
+  }).join('');
+}
+
+function distCard(label, kind, dims){
+  let h='<div class="distcard"><h4>'+label+' <span class="kind">'+kind+'</span></h4>';
+  Object.keys(dims).forEach(dev=>{
+    const metrics=dims[dev];
+    Object.keys(metrics).forEach(m=>{
+      const d=metrics[m];
+      h+='<div class="distrow"><div class="lbl"><span>'+m+' <span class="k">('+dev.toLowerCase()+')</span></span><span class="k">'+d.good+'% good</span></div>'+
+        '<div class="bar"><div class="bg" style="width:'+d.good+'%"></div><div class="bn" style="width:'+d.ni+'%"></div><div class="bp" style="width:'+d.poor+'%"></div></div>'+
+        '<div class="barkey">'+d.good+'% good &middot; '+d.ni+'% needs-improvement &middot; '+d.poor+'% poor</div></div>';
+    });
+  });
+  return h+'</div>';
+}
+function renderField(tech){
+  const host=document.getElementById('fieldDist');
+  const field=(tech&&tech.field)||{};
+  const targets=Object.keys(field);
+  if(!targets.length){ host.innerHTML='<div class="empty">No field distribution yet. Run the Field refresh, then reload.</div>'; return; }
+  const cards=targets.map(t=>{ const p=field[t]; const dims={}; Object.keys(p).forEach(k=>{ if(k==='label'||k==='kind')return; dims[k]=p[k]; }); return distCard(p.label||t,p.kind||'',dims); }).join('');
+  host.innerHTML='<div class="distgrid">'+cards+'</div>';
+}
+
+(async function(){
+  const tech=await load('tech_data.json')||{};
+  document.getElementById('updated').textContent='Lab diagnostics: '+(tech.labPulled||'?')+'   \u00b7   Field distribution: '+(tech.fieldPulled||'?');
+  if(tech.sample) document.getElementById('sampleBanner').innerHTML='<div class="sample"><b>Showing sample data.</b> These are illustrative values (grounded in known issues) so you can see the layout. Run the Tech refresh workflow to replace them with live numbers.</div>';
+  renderLab(tech); renderField(tech);
+})();
+</script>
+</body>
+</html>

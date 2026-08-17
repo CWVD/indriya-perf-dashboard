@@ -1,0 +1,64 @@
+{
+  "sample": true,
+  "labPulled": "sample data \u2014 run the Tech refresh to replace",
+  "fieldPulled": "sample data \u2014 run the Tech refresh to replace",
+  "lab": {
+    "https://www.indriya.com/": {
+      "label": "Homepage", "kind": "Homepage",
+      "mobile": {
+        "lcp_element": "img.homepage-hero-banner (hero image)",
+        "cls_elements": [
+          {"label": "div.container.responsivegrid", "score": 0.808},
+          {"label": "section.cmp-teaser (homepage teaser)", "score": 0.021}
+        ],
+        "opps": [
+          {"id":"render-blocking-resources","title":"Eliminate render-blocking resources","detail":"Est savings 1,800 ms","savings_ms":1800,"savings_bytes":null},
+          {"id":"unused-javascript","title":"Reduce unused JavaScript","detail":"Est savings 853 KiB","savings_ms":1200,"savings_bytes":873472},
+          {"id":"uses-optimized-images","title":"Efficiently encode images","detail":"Est savings 7,168 KiB","savings_ms":null,"savings_bytes":7340032},
+          {"id":"uses-long-cache-ttl","title":"Inefficient cache policy on static assets","detail":"15,926 KiB affected","savings_ms":null,"savings_bytes":16308224},
+          {"id":"mainthread-work-breakdown","title":"Minimize main-thread work","detail":"6.6 s","savings_ms":null,"savings_bytes":null}
+        ]
+      },
+      "desktop": {
+        "lcp_element": "img.homepage-hero-banner (hero image)",
+        "cls_elements": [{"label": "div.container.responsivegrid", "score": 0.140}],
+        "opps": [
+          {"id":"unused-javascript","title":"Reduce unused JavaScript","detail":"Est savings 853 KiB","savings_ms":600,"savings_bytes":873472},
+          {"id":"uses-optimized-images","title":"Efficiently encode images","detail":"Est savings 4,900 KiB","savings_ms":null,"savings_bytes":5017600}
+        ]
+      }
+    },
+    "https://www.indriya.com/jewellery/rings": {
+      "label": "Rings (PLP)", "kind": "PLP",
+      "mobile": {
+        "lcp_element": "div.product-grid img (first product tile)",
+        "cls_elements": [{"label": "div.plp-filter-bar", "score": 0.045}],
+        "opps": [
+          {"id":"unused-javascript","title":"Reduce unused JavaScript","detail":"Est savings 641 KiB","savings_ms":900,"savings_bytes":656384},
+          {"id":"uses-responsive-images","title":"Properly size images","detail":"Est savings 2,100 KiB","savings_ms":null,"savings_bytes":2150400}
+        ]
+      },
+      "desktop": {"lcp_element":"div.product-grid img","cls_elements":[],"opps":[{"id":"unused-javascript","title":"Reduce unused JavaScript","detail":"Est savings 641 KiB","savings_ms":450,"savings_bytes":656384}]}
+    }
+  },
+  "field": {
+    "https://www.indriya.com": {
+      "label": "Whole site", "kind": "Origin",
+      "PHONE": {
+        "LCP": {"good": 41, "ni": 30, "poor": 29},
+        "INP": {"good": 62, "ni": 30, "poor": 8},
+        "CLS": {"good": 88, "ni": 8, "poor": 4}
+      }
+    },
+    "https://www.indriya.com/": {
+      "label": "Homepage", "kind": "Homepage",
+      "PHONE": {
+        "LCP": {"good": 22, "ni": 34, "poor": 44},
+        "CLS": {"good": 9, "ni": 24, "poor": 67}
+      },
+      "DESKTOP": {
+        "LCP": {"good": 78, "ni": 15, "poor": 7}
+      }
+    }
+  }
+}
