@@ -311,7 +311,12 @@ def refresh_field():
                 if hist and len(hist) >= 3:
                     def _last_density(b):
                         ds = (b or {}).get("densities") or []
-                        return ds[-1] if ds else None
+                        if not ds:
+                            return None
+                        try:
+                            return float(ds[-1])   # CrUX returns densities as strings sometimes
+                        except (TypeError, ValueError):
+                            return None
                     g, n, pr = _last_density(hist[0]), _last_density(hist[1]), _last_density(hist[2])
                     if None not in (g, n, pr):
                         node = tech_field.setdefault(target["value"], {
