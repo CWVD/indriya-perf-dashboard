@@ -314,9 +314,12 @@ def refresh_field():
                         if not ds:
                             return None
                         try:
-                            return float(ds[-1])   # CrUX returns densities as strings sometimes
+                            v = float(ds[-1])   # CrUX returns densities as strings, sometimes "NaN"
                         except (TypeError, ValueError):
                             return None
+                        if v != v or v in (float("inf"), float("-inf")):  # NaN / inf guard
+                            return None
+                        return v
                     g, n, pr = _last_density(hist[0]), _last_density(hist[1]), _last_density(hist[2])
                     if None not in (g, n, pr):
                         node = tech_field.setdefault(target["value"], {
