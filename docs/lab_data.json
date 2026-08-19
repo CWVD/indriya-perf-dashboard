@@ -1,5 +1,5 @@
 {
-  "pulledOn": "2026-08-18 04:09 UTC",
+  "pulledOn": "2026-08-19 04:17 UTC",
   "rows": [
     {
       "date": "2026-08-05",
@@ -15372,6 +15372,66 @@
       "metric": "PerfScore",
       "value": 73,
       "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-19",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "mobile",
+      "metric": "LCP",
+      "value": 22897,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-19",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "mobile",
+      "metric": "CLS",
+      "value": 0.005,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-08-19",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "mobile",
+      "metric": "TBT",
+      "value": 616,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-19",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "mobile",
+      "metric": "FCP",
+      "value": 2551,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-08-19",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "mobile",
+      "metric": "SI",
+      "value": 7222,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-08-19",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "mobile",
+      "metric": "PerfScore",
+      "value": 49,
+      "rating": "Poor"
     }
   ]
 }
