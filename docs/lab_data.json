@@ -1,5 +1,5 @@
 {
-  "pulledOn": "2026-09-04 01:46 UTC",
+  "pulledOn": "2026-09-05 01:47 UTC",
   "rows": [
     {
       "date": "2026-08-05",
@@ -25211,6 +25211,486 @@
       "strategy": "desktop",
       "metric": "PerfScore",
       "value": 63,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "mobile",
+      "metric": "LCP",
+      "value": 6526,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "mobile",
+      "metric": "CLS",
+      "value": 0.043,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "mobile",
+      "metric": "TBT",
+      "value": 2095,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "mobile",
+      "metric": "FCP",
+      "value": 1951,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "mobile",
+      "metric": "SI",
+      "value": 6285,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "mobile",
+      "metric": "PerfScore",
+      "value": 42,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "desktop",
+      "metric": "LCP",
+      "value": 1141,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "desktop",
+      "metric": "CLS",
+      "value": 0.078,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "desktop",
+      "metric": "TBT",
+      "value": 373,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "desktop",
+      "metric": "FCP",
+      "value": 561,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "desktop",
+      "metric": "SI",
+      "value": 1662,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "strategy": "desktop",
+      "metric": "PerfScore",
+      "value": 78,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "LCP",
+      "value": 9461,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "CLS",
+      "value": 0.045,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "TBT",
+      "value": 1329,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "FCP",
+      "value": 2007,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "SI",
+      "value": 9167,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "PerfScore",
+      "value": 40,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "desktop",
+      "metric": "LCP",
+      "value": 2760,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "desktop",
+      "metric": "CLS",
+      "value": 0.152,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "desktop",
+      "metric": "TBT",
+      "value": 238,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "desktop",
+      "metric": "FCP",
+      "value": 553,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "desktop",
+      "metric": "SI",
+      "value": 2992,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "strategy": "desktop",
+      "metric": "PerfScore",
+      "value": 63,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/neckwear",
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "LCP",
+      "value": 13494,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/neckwear",
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "CLS",
+      "value": 0.046,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/neckwear",
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "TBT",
+      "value": 627,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/neckwear",
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "FCP",
+      "value": 2401,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/neckwear",
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "SI",
+      "value": 9294,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery/neckwear",
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "strategy": "mobile",
+      "metric": "PerfScore",
+      "value": 47,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "mobile",
+      "metric": "LCP",
+      "value": 6301,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "mobile",
+      "metric": "CLS",
+      "value": 0.014,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "mobile",
+      "metric": "TBT",
+      "value": 5524,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "mobile",
+      "metric": "FCP",
+      "value": 1951,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "mobile",
+      "metric": "SI",
+      "value": 16446,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "mobile",
+      "metric": "PerfScore",
+      "value": 36,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "desktop",
+      "metric": "LCP",
+      "value": 4602,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "desktop",
+      "metric": "CLS",
+      "value": 0.217,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "desktop",
+      "metric": "TBT",
+      "value": 1606,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "desktop",
+      "metric": "FCP",
+      "value": 401,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "desktop",
+      "metric": "SI",
+      "value": 2119,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-products/nakshatra-diamond-necklace-deara70-adns713",
+      "label": "Nakshatra Necklace (PDP)",
+      "kind": "PDP",
+      "strategy": "desktop",
+      "metric": "PerfScore",
+      "value": 33,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "desktop",
+      "metric": "LCP",
+      "value": 1349,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "desktop",
+      "metric": "CLS",
+      "value": 0.218,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "desktop",
+      "metric": "TBT",
+      "value": 861,
+      "rating": "Poor"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "desktop",
+      "metric": "FCP",
+      "value": 441,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "desktop",
+      "metric": "SI",
+      "value": 2380,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-05",
+      "target": "https://www.indriya.com/jewellery-stores",
+      "label": "Store locator",
+      "kind": "Store",
+      "strategy": "desktop",
+      "metric": "PerfScore",
+      "value": 53,
       "rating": "Needs Improvement"
     }
   ]
