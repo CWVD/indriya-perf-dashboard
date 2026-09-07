@@ -1,6 +1,6 @@
 {
   "labPulled": "2026-09-06 06:38 UTC",
-  "fieldPulled": "2026-08-31 02:02 UTC",
+  "fieldPulled": "2026-09-07 02:04 UTC",
   "lab": {
     "https://www.indriya.com/jewellery/rings": {
       "label": "Rings (PLP)",
@@ -380,14 +380,14 @@
       "kind": "Origin",
       "PHONE": {
         "LCP": {
-          "good": 58,
-          "ni": 21,
+          "good": 57,
+          "ni": 22,
           "poor": 21
         },
         "CLS": {
           "good": 88,
           "ni": 4,
-          "poor": 7
+          "poor": 8
         },
         "INP": {
           "good": 65,
@@ -411,51 +411,51 @@
       "kind": "Homepage",
       "PHONE": {
         "LCP": {
-          "good": 47,
-          "ni": 16,
-          "poor": 37
+          "good": 50,
+          "ni": 17,
+          "poor": 33
         },
         "CLS": {
-          "good": 65,
-          "ni": 10,
-          "poor": 24
+          "good": 69,
+          "ni": 9,
+          "poor": 22
         },
         "INP": {
-          "good": 68,
-          "ni": 22,
+          "good": 66,
+          "ni": 24,
           "poor": 10
         },
         "FCP": {
-          "good": 49,
-          "ni": 18,
-          "poor": 33
+          "good": 51,
+          "ni": 19,
+          "poor": 30
         },
         "TTFB": {
-          "good": 43,
-          "ni": 27,
-          "poor": 29
+          "good": 46,
+          "ni": 29,
+          "poor": 26
         }
       },
       "DESKTOP": {
         "LCP": {
-          "good": 68,
+          "good": 71,
           "ni": 6,
-          "poor": 26
+          "poor": 24
         },
         "CLS": {
-          "good": 22,
-          "ni": 39,
+          "good": 26,
+          "ni": 35,
           "poor": 39
         },
         "INP": {
-          "good": 93,
-          "ni": 5,
-          "poor": 2
+          "good": 94,
+          "ni": 4,
+          "poor": 1
         },
         "FCP": {
-          "good": 71,
+          "good": 75,
           "ni": 3,
-          "poor": 26
+          "poor": 22
         }
       }
     },
@@ -464,9 +464,9 @@
       "kind": "PLP",
       "PHONE": {
         "LCP": {
-          "good": 49,
+          "good": 47,
           "ni": 25,
-          "poor": 26
+          "poor": 28
         },
         "CLS": {
           "good": 99,
@@ -474,14 +474,14 @@
           "poor": 1
         },
         "INP": {
-          "good": 63,
-          "ni": 24,
-          "poor": 13
+          "good": 61,
+          "ni": 25,
+          "poor": 14
         },
         "FCP": {
-          "good": 43,
+          "good": 42,
           "ni": 29,
-          "poor": 28
+          "poor": 29
         },
         "TTFB": {
           "good": 39,
@@ -495,9 +495,9 @@
       "kind": "PLP",
       "PHONE": {
         "LCP": {
-          "good": 54,
+          "good": 52,
           "ni": 23,
-          "poor": 23
+          "poor": 25
         },
         "CLS": {
           "good": 97,
@@ -505,14 +505,14 @@
           "poor": 2
         },
         "INP": {
-          "good": 68,
-          "ni": 21,
+          "good": 67,
+          "ni": 22,
           "poor": 11
         },
         "FCP": {
-          "good": 48,
+          "good": 47,
           "ni": 27,
-          "poor": 25
+          "poor": 26
         },
         "TTFB": {
           "good": 40,
