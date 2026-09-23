@@ -1,6 +1,153 @@
 {
   "labPulled": "2026-09-23 06:31 UTC",
-  "fieldPulled": "2026-09-23 08:55 UTC",
+  "fieldPulled": "2026-09-23 09:22 UTC",
   "lab": {},
-  "field": {}
+  "field": {
+    "https://www.indriya.com": {
+      "label": "Whole site (all pages)",
+      "kind": "Origin",
+      "PHONE": {
+        "LCP": {
+          "good": 56,
+          "ni": 22,
+          "poor": 22
+        },
+        "CLS": {
+          "good": 90,
+          "ni": 3,
+          "poor": 7
+        },
+        "INP": {
+          "good": 64,
+          "ni": 26,
+          "poor": 11
+        },
+        "FCP": {
+          "good": 54,
+          "ni": 23,
+          "poor": 23
+        },
+        "TTFB": {
+          "good": 50,
+          "ni": 31,
+          "poor": 19
+        }
+      }
+    },
+    "https://www.indriya.com/": {
+      "label": "Homepage",
+      "kind": "Homepage",
+      "PHONE": {
+        "LCP": {
+          "good": 63,
+          "ni": 19,
+          "poor": 19
+        },
+        "CLS": {
+          "good": 96,
+          "ni": 1,
+          "poor": 3
+        },
+        "INP": {
+          "good": 62,
+          "ni": 28,
+          "poor": 10
+        },
+        "FCP": {
+          "good": 60,
+          "ni": 21,
+          "poor": 19
+        },
+        "TTFB": {
+          "good": 52,
+          "ni": 32,
+          "poor": 15
+        }
+      },
+      "DESKTOP": {
+        "LCP": {
+          "good": 86,
+          "ni": 5,
+          "poor": 9
+        },
+        "CLS": {
+          "good": 69,
+          "ni": 22,
+          "poor": 9
+        },
+        "INP": {
+          "good": 96,
+          "ni": 4,
+          "poor": 0
+        },
+        "FCP": {
+          "good": 86,
+          "ni": 4,
+          "poor": 10
+        }
+      }
+    },
+    "https://www.indriya.com/jewellery/rings": {
+      "label": "Rings (PLP)",
+      "kind": "PLP",
+      "PHONE": {
+        "LCP": {
+          "good": 43,
+          "ni": 26,
+          "poor": 31
+        },
+        "CLS": {
+          "good": 99,
+          "ni": 1,
+          "poor": 1
+        },
+        "INP": {
+          "good": 59,
+          "ni": 26,
+          "poor": 15
+        },
+        "FCP": {
+          "good": 41,
+          "ni": 29,
+          "poor": 30
+        },
+        "TTFB": {
+          "good": 39,
+          "ni": 39,
+          "poor": 22
+        }
+      }
+    },
+    "https://www.indriya.com/jewellery/neckwear": {
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "PHONE": {
+        "LCP": {
+          "good": 47,
+          "ni": 25,
+          "poor": 28
+        },
+        "CLS": {
+          "good": 98,
+          "ni": 1,
+          "poor": 1
+        },
+        "INP": {
+          "good": 62,
+          "ni": 25,
+          "poor": 14
+        },
+        "FCP": {
+          "good": 44,
+          "ni": 28,
+          "poor": 28
+        },
+        "TTFB": {
+          "good": 40,
+          "ni": 38,
+          "poor": 21
+        }
+      }
+    }
+  }
 }
