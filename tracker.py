@@ -94,6 +94,20 @@ FIELD_METRICS = [
     "first_contentful_paint",
     "experimental_time_to_first_byte",
 ]
+
+# Metric sets tried in order, largest first. CrUX 400s the WHOLE request if it
+# contains even one metric name it no longer accepts, so if the full set fails we
+# retry with progressively smaller sets. The experimental TTFB metric is the most
+# likely to be renamed/retired by Google, so it is dropped first; the three core
+# Core Web Vitals (LCP, CLS, INP) are the most stable and power the headline tiles.
+FIELD_METRIC_LADDER = [
+    ["largest_contentful_paint", "cumulative_layout_shift", "interaction_to_next_paint",
+     "first_contentful_paint", "experimental_time_to_first_byte"],
+    ["largest_contentful_paint", "cumulative_layout_shift", "interaction_to_next_paint",
+     "first_contentful_paint"],
+    ["largest_contentful_paint", "cumulative_layout_shift", "interaction_to_next_paint"],
+]
+
 FIELD_PRETTY = {
     "largest_contentful_paint":         "LCP",
     "cumulative_layout_shift":          "CLS",
@@ -250,33 +264,57 @@ def write_json(path, obj):
 # ============ FIELD  (CrUX History API) ============
 # Overwrites its file every run. Intentional: the History API always returns the
 # full ~6-month history, so rewriting keeps it clean with no duplicates.
+
+def fetch_field_record(target, ff):
+    """POST to the CrUX History API, trying progressively smaller metric sets
+    (FIELD_METRIC_LADDER) so a single retired metric name cannot 400 the whole
+    page. Returns the parsed 'record' dict, or None. On the first non-200 it
+    prints the actual error body (CrUX names the offending field there), which is
+    what turns a bare 'HTTP 400' into an actionable message."""
+    base = {"formFactor": ff}
+    if target["type"] == "origin":
+        base["origin"] = target["value"]
+    else:
+        base["url"] = target["value"]
+
+    logged = False
+    for metrics in FIELD_METRIC_LADDER:
+        body = dict(base, metrics=metrics)
+        try:
+            resp = requests.post(
+                "https://chromeuxreport.googleapis.com/v1/records:queryHistoryRecord",
+                params={"key": API_KEY}, json=body, timeout=60,
+            )
+        except requests.RequestException as e:
+            print(f"FIELD error {target['value']} [{ff}]: {e}")
+            return None
+
+        if resp.status_code == 200:
+            if len(metrics) < len(FIELD_METRIC_LADDER[0]):
+                print(f"FIELD ok {target['value']} [{ff}] with reduced metrics {metrics}")
+            return resp.json().get("record", {})
+
+        # Non-200: print the real reason once, then try a smaller metric set.
+        if not logged:
+            print(f"FIELD skip {target['value']} [{ff}] HTTP {resp.status_code}: "
+                  f"{resp.text[:300]}")
+            logged = True
+        # Only a 400 (bad request / bad metric) is worth retrying with fewer
+        # metrics. 403/429/5xx are auth/quota/server issues -- give up on this one.
+        if resp.status_code != 400:
+            return None
+    return None
+
+
 def refresh_field():
     rows = []
     tech_field = {}   # target -> {label,kind, formFactor -> metric -> {good,ni,poor}}
     for target in FIELD_TARGETS:
         for ff in FIELD_FORM_FACTORS:
-            body = {"formFactor": ff, "metrics": FIELD_METRICS}
-            if target["type"] == "origin":
-                body["origin"] = target["value"]
-            else:
-                body["url"] = target["value"]
-
-            try:
-                resp = requests.post(
-                    "https://chromeuxreport.googleapis.com/v1/records:queryHistoryRecord",
-                    params={"key": API_KEY},
-                    json=body,
-                    timeout=60,
-                )
-            except requests.RequestException as e:
-                print(f"FIELD error {target['value']} [{ff}]: {e}")
+            rec = fetch_field_record(target, ff)
+            if rec is None:
                 continue
 
-            if resp.status_code != 200:
-                print(f"FIELD skip {target['value']} [{ff}] HTTP {resp.status_code}")
-                continue
-
-            rec = resp.json().get("record", {})
             periods = rec.get("collectionPeriods", [])
             metrics = rec.get("metrics", {})
 
