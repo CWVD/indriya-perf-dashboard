@@ -1,16 +1,6 @@
 {
-  "pulledOn": "2026-09-23 09:22 UTC",
+  "pulledOn": "2026-09-28 07:59 UTC",
   "rows": [
-    {
-      "date": "2026-04-04",
-      "target": "https://www.indriya.com",
-      "label": "Whole site (all pages)",
-      "kind": "Origin",
-      "formFactor": "PHONE",
-      "metric": "LCP",
-      "p75": 2807.0,
-      "rating": "Needs Improvement"
-    },
     {
       "date": "2026-04-11",
       "target": "https://www.indriya.com",
@@ -252,14 +242,14 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com",
       "label": "Whole site (all pages)",
       "kind": "Origin",
       "formFactor": "PHONE",
-      "metric": "CLS",
-      "p75": 0.03,
-      "rating": "Good"
+      "metric": "LCP",
+      "p75": 3607.0,
+      "rating": "Needs Improvement"
     },
     {
       "date": "2026-04-11",
@@ -502,14 +492,14 @@
       "rating": "Good"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com",
       "label": "Whole site (all pages)",
       "kind": "Origin",
       "formFactor": "PHONE",
-      "metric": "INP",
-      "p75": 212.0,
-      "rating": "Needs Improvement"
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
     },
     {
       "date": "2026-04-11",
@@ -752,13 +742,13 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com",
       "label": "Whole site (all pages)",
       "kind": "Origin",
       "formFactor": "PHONE",
-      "metric": "FCP",
-      "p75": 2223.0,
+      "metric": "INP",
+      "p75": 264.0,
       "rating": "Needs Improvement"
     },
     {
@@ -1002,13 +992,13 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com",
       "label": "Whole site (all pages)",
       "kind": "Origin",
       "formFactor": "PHONE",
-      "metric": "TTFB",
-      "p75": 1248.0,
+      "metric": "FCP",
+      "p75": 2801.0,
       "rating": "Needs Improvement"
     },
     {
@@ -1252,13 +1242,53 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
-      "target": "https://www.indriya.com/",
-      "label": "Homepage",
-      "kind": "Homepage",
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com",
+      "label": "Whole site (all pages)",
+      "kind": "Origin",
       "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1478.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com",
+      "label": "Whole site (all pages)",
+      "kind": "Origin",
+      "formFactor": "DESKTOP",
       "metric": "LCP",
-      "p75": 2082.0,
+      "p75": 2118.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com",
+      "label": "Whole site (all pages)",
+      "kind": "Origin",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.18,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com",
+      "label": "Whole site (all pages)",
+      "kind": "Origin",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 95.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com",
+      "label": "Whole site (all pages)",
+      "kind": "Origin",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 1573.0,
       "rating": "Good"
     },
     {
@@ -1502,14 +1532,14 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/",
       "label": "Homepage",
       "kind": "Homepage",
       "formFactor": "PHONE",
-      "metric": "CLS",
-      "p75": 0.01,
-      "rating": "Good"
+      "metric": "LCP",
+      "p75": 3250.0,
+      "rating": "Needs Improvement"
     },
     {
       "date": "2026-04-11",
@@ -1752,13 +1782,13 @@
       "rating": "Good"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/",
       "label": "Homepage",
       "kind": "Homepage",
       "formFactor": "PHONE",
-      "metric": "INP",
-      "p75": 159.0,
+      "metric": "CLS",
+      "p75": 0.01,
       "rating": "Good"
     },
     {
@@ -2002,14 +2032,14 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/",
       "label": "Homepage",
       "kind": "Homepage",
       "formFactor": "PHONE",
-      "metric": "FCP",
-      "p75": 1455.0,
-      "rating": "Good"
+      "metric": "INP",
+      "p75": 277.0,
+      "rating": "Needs Improvement"
     },
     {
       "date": "2026-04-11",
@@ -2252,13 +2282,13 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/",
       "label": "Homepage",
       "kind": "Homepage",
       "formFactor": "PHONE",
-      "metric": "TTFB",
-      "p75": 856.0,
+      "metric": "FCP",
+      "p75": 2538.0,
       "rating": "Needs Improvement"
     },
     {
@@ -2502,6 +2532,16 @@
       "rating": "Needs Improvement"
     },
     {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1337.0,
+      "rating": "Needs Improvement"
+    },
+    {
       "date": "2026-04-18",
       "target": "https://www.indriya.com/",
       "label": "Homepage",
@@ -2719,6 +2759,16 @@
       "formFactor": "DESKTOP",
       "metric": "LCP",
       "p75": 1608.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "formFactor": "DESKTOP",
+      "metric": "LCP",
+      "p75": 1534.0,
       "rating": "Good"
     },
     {
@@ -2942,6 +2992,16 @@
       "rating": "Needs Improvement"
     },
     {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "formFactor": "DESKTOP",
+      "metric": "CLS",
+      "p75": 0.09,
+      "rating": "Good"
+    },
+    {
       "date": "2026-04-18",
       "target": "https://www.indriya.com/",
       "label": "Homepage",
@@ -3159,6 +3219,16 @@
       "formFactor": "DESKTOP",
       "metric": "INP",
       "p75": 93.0,
+      "rating": "Good"
+    },
+    {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "formFactor": "DESKTOP",
+      "metric": "INP",
+      "p75": 95.0,
       "rating": "Good"
     },
     {
@@ -3382,6 +3452,16 @@
       "rating": "Good"
     },
     {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com/",
+      "label": "Homepage",
+      "kind": "Homepage",
+      "formFactor": "DESKTOP",
+      "metric": "FCP",
+      "p75": 1162.0,
+      "rating": "Good"
+    },
+    {
       "date": "2026-05-16",
       "target": "https://www.indriya.com/",
       "label": "Homepage",
@@ -3459,16 +3539,6 @@
       "formFactor": "DESKTOP",
       "metric": "TTFB",
       "p75": 1246.0,
-      "rating": "Needs Improvement"
-    },
-    {
-      "date": "2026-04-04",
-      "target": "https://www.indriya.com/jewellery/rings",
-      "label": "Rings (PLP)",
-      "kind": "PLP",
-      "formFactor": "PHONE",
-      "metric": "LCP",
-      "p75": 3101.0,
       "rating": "Needs Improvement"
     },
     {
@@ -3712,14 +3782,14 @@
       "rating": "Poor"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/rings",
       "label": "Rings (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "CLS",
-      "p75": 0.04,
-      "rating": "Good"
+      "metric": "LCP",
+      "p75": 4488.0,
+      "rating": "Poor"
     },
     {
       "date": "2026-04-11",
@@ -3962,14 +4032,14 @@
       "rating": "Good"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/rings",
       "label": "Rings (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "INP",
-      "p75": 230.0,
-      "rating": "Needs Improvement"
+      "metric": "CLS",
+      "p75": 0.03,
+      "rating": "Good"
     },
     {
       "date": "2026-04-11",
@@ -4212,13 +4282,13 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/rings",
       "label": "Rings (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "FCP",
-      "p75": 2551.0,
+      "metric": "INP",
+      "p75": 324.0,
       "rating": "Needs Improvement"
     },
     {
@@ -4462,14 +4532,14 @@
       "rating": "Poor"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/rings",
       "label": "Rings (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "TTFB",
-      "p75": 1394.0,
-      "rating": "Needs Improvement"
+      "metric": "FCP",
+      "p75": 3299.0,
+      "rating": "Poor"
     },
     {
       "date": "2026-04-11",
@@ -4712,13 +4782,13 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
-      "target": "https://www.indriya.com/jewellery/neckwear",
-      "label": "Necklaces (PLP)",
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com/jewellery/rings",
+      "label": "Rings (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "LCP",
-      "p75": 2867.0,
+      "metric": "TTFB",
+      "p75": 1638.0,
       "rating": "Needs Improvement"
     },
     {
@@ -4962,14 +5032,14 @@
       "rating": "Poor"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/neckwear",
       "label": "Necklaces (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "CLS",
-      "p75": 0.04,
-      "rating": "Good"
+      "metric": "LCP",
+      "p75": 4287.0,
+      "rating": "Poor"
     },
     {
       "date": "2026-04-11",
@@ -5212,13 +5282,13 @@
       "rating": "Good"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/neckwear",
       "label": "Necklaces (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "INP",
-      "p75": 189.0,
+      "metric": "CLS",
+      "p75": 0.03,
       "rating": "Good"
     },
     {
@@ -5462,13 +5532,13 @@
       "rating": "Needs Improvement"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/neckwear",
       "label": "Necklaces (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "FCP",
-      "p75": 2411.0,
+      "metric": "INP",
+      "p75": 305.0,
       "rating": "Needs Improvement"
     },
     {
@@ -5712,14 +5782,14 @@
       "rating": "Poor"
     },
     {
-      "date": "2026-04-04",
+      "date": "2026-09-26",
       "target": "https://www.indriya.com/jewellery/neckwear",
       "label": "Necklaces (PLP)",
       "kind": "PLP",
       "formFactor": "PHONE",
-      "metric": "TTFB",
-      "p75": 1390.0,
-      "rating": "Needs Improvement"
+      "metric": "FCP",
+      "p75": 3167.0,
+      "rating": "Poor"
     },
     {
       "date": "2026-04-11",
@@ -5959,6 +6029,16 @@
       "formFactor": "PHONE",
       "metric": "TTFB",
       "p75": 1624.0,
+      "rating": "Needs Improvement"
+    },
+    {
+      "date": "2026-09-26",
+      "target": "https://www.indriya.com/jewellery/neckwear",
+      "label": "Necklaces (PLP)",
+      "kind": "PLP",
+      "formFactor": "PHONE",
+      "metric": "TTFB",
+      "p75": 1615.0,
       "rating": "Needs Improvement"
     },
     {
