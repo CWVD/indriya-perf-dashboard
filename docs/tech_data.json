@@ -1,6 +1,6 @@
 {
   "labPulled": "2026-10-26 06:55 UTC",
-  "fieldPulled": "2026-10-19 07:07 UTC",
+  "fieldPulled": "2026-10-26 07:13 UTC",
   "lab": {
     "https://www.indriya.com/": {
       "label": "Homepage",
@@ -475,67 +475,14 @@
     }
   },
   "field": {
-    "https://www.indriya.com": {
-      "label": "Whole site (all pages)",
-      "kind": "Origin",
-      "PHONE": {
-        "LCP": {
-          "good": 60,
-          "ni": 21,
-          "poor": 19
-        },
-        "CLS": {
-          "good": 94,
-          "ni": 2,
-          "poor": 5
-        },
-        "INP": {
-          "good": 64,
-          "ni": 27,
-          "poor": 9
-        },
-        "FCP": {
-          "good": 58,
-          "ni": 21,
-          "poor": 21
-        },
-        "TTFB": {
-          "good": 51,
-          "ni": 30,
-          "poor": 19
-        }
-      },
-      "DESKTOP": {
-        "LCP": {
-          "good": 80,
-          "ni": 9,
-          "poor": 11
-        },
-        "CLS": {
-          "good": 41,
-          "ni": 42,
-          "poor": 17
-        },
-        "INP": {
-          "good": 96,
-          "ni": 4,
-          "poor": 0
-        },
-        "FCP": {
-          "good": 79,
-          "ni": 8,
-          "poor": 13
-        }
-      }
-    },
     "https://www.indriya.com/": {
       "label": "Homepage",
       "kind": "Homepage",
       "PHONE": {
         "LCP": {
-          "good": 62,
-          "ni": 19,
-          "poor": 19
+          "good": 61,
+          "ni": 21,
+          "poor": 18
         },
         "CLS": {
           "good": 99,
@@ -543,41 +490,41 @@
           "poor": 0
         },
         "INP": {
-          "good": 61,
-          "ni": 29,
-          "poor": 9
+          "good": 59,
+          "ni": 31,
+          "poor": 11
         },
         "FCP": {
-          "good": 59,
-          "ni": 21,
-          "poor": 20
+          "good": 60,
+          "ni": 22,
+          "poor": 19
         },
         "TTFB": {
-          "good": 51,
-          "ni": 32,
-          "poor": 17
+          "good": 49,
+          "ni": 33,
+          "poor": 18
         }
       },
       "DESKTOP": {
         "LCP": {
-          "good": 88,
-          "ni": 4,
+          "good": 87,
+          "ni": 5,
           "poor": 8
         },
         "CLS": {
-          "good": 77,
-          "ni": 21,
-          "poor": 2
+          "good": 78,
+          "ni": 19,
+          "poor": 3
         },
         "INP": {
-          "good": 95,
-          "ni": 4,
+          "good": 93,
+          "ni": 6,
           "poor": 1
         },
         "FCP": {
           "good": 87,
-          "ni": 4,
-          "poor": 9
+          "ni": 6,
+          "poor": 7
         }
       }
     },
@@ -586,7 +533,7 @@
       "kind": "PLP",
       "PHONE": {
         "LCP": {
-          "good": 46,
+          "good": 47,
           "ni": 25,
           "poor": 28
         },
@@ -596,19 +543,19 @@
           "poor": 1
         },
         "INP": {
-          "good": 60,
-          "ni": 26,
+          "good": 58,
+          "ni": 28,
           "poor": 14
         },
         "FCP": {
-          "good": 44,
+          "good": 45,
           "ni": 28,
-          "poor": 28
+          "poor": 26
         },
         "TTFB": {
-          "good": 41,
-          "ni": 38,
-          "poor": 21
+          "good": 42,
+          "ni": 39,
+          "poor": 19
         }
       }
     },
@@ -622,24 +569,24 @@
           "poor": 26
         },
         "CLS": {
-          "good": 97,
+          "good": 98,
           "ni": 1,
           "poor": 1
         },
         "INP": {
-          "good": 63,
-          "ni": 24,
+          "good": 61,
+          "ni": 26,
           "poor": 13
         },
         "FCP": {
-          "good": 47,
-          "ni": 27,
-          "poor": 26
+          "good": 48,
+          "ni": 28,
+          "poor": 25
         },
         "TTFB": {
-          "good": 41,
+          "good": 43,
           "ni": 38,
-          "poor": 21
+          "poor": 19
         }
       }
     }
