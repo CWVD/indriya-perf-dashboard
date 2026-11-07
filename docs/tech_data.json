@@ -1,5 +1,5 @@
 {
-  "labPulled": "2026-11-06 08:35 UTC",
+  "labPulled": "2026-11-07 07:52 UTC",
   "fieldPulled": "2026-11-02 08:37 UTC",
   "lab": {
     "https://www.indriya.com/": {
@@ -10,35 +10,28 @@
           {
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 404\u00a0KiB",
-            "savings_ms": 2100,
-            "savings_bytes": 413655
+            "detail": "Est savings of 405\u00a0KiB",
+            "savings_ms": 600,
+            "savings_bytes": 414984
           },
           {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
             "detail": "Est savings of 123\u00a0KiB",
             "savings_ms": 600,
-            "savings_bytes": 125941
+            "savings_bytes": 125977
           },
           {
             "id": "total-byte-weight",
             "title": "Avoid enormous network payloads",
-            "detail": "Total size was 11,577\u00a0KiB",
-            "savings_ms": null,
-            "savings_bytes": null
-          },
-          {
-            "id": "bootup-time",
-            "title": "Reduce JavaScript execution time",
-            "detail": "2.5\u00a0s",
+            "detail": "Total size was 11,646\u00a0KiB",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "6.7\u00a0s",
+            "detail": "2.9\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -47,37 +40,30 @@
       "desktop": {
         "opps": [
           {
-            "id": "unused-css-rules",
-            "title": "Reduce unused CSS",
-            "detail": "Est savings of 118\u00a0KiB",
-            "savings_ms": 130,
-            "savings_bytes": 120854
-          },
-          {
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
             "detail": "Est savings of 406\u00a0KiB",
-            "savings_ms": 0,
-            "savings_bytes": 415303
+            "savings_ms": 120,
+            "savings_bytes": 415244
+          },
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce unused CSS",
+            "detail": "Est savings of 118\u00a0KiB",
+            "savings_ms": 80,
+            "savings_bytes": 120889
           },
           {
             "id": "total-byte-weight",
             "title": "Avoid enormous network payloads",
-            "detail": "Total size was 11,203\u00a0KiB",
-            "savings_ms": null,
-            "savings_bytes": null
-          },
-          {
-            "id": "bootup-time",
-            "title": "Reduce JavaScript execution time",
-            "detail": "2.5\u00a0s",
+            "detail": "Total size was 11,205\u00a0KiB",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "4.9\u00a0s",
+            "detail": "2.5\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -87,79 +73,33 @@
     "https://www.indriya.com/jewellery/rings": {
       "label": "Rings (PLP)",
       "kind": "PLP",
-      "mobile": {
-        "opps": [
-          {
-            "id": "unused-javascript",
-            "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 405\u00a0KiB",
-            "savings_ms": 1050,
-            "savings_bytes": 414650
-          },
-          {
-            "id": "unused-css-rules",
-            "title": "Reduce unused CSS",
-            "detail": "Est savings of 129\u00a0KiB",
-            "savings_ms": 600,
-            "savings_bytes": 131622
-          },
-          {
-            "id": "total-byte-weight",
-            "title": "Avoid enormous network payloads",
-            "detail": "Total size was 3,429\u00a0KiB",
-            "savings_ms": null,
-            "savings_bytes": null
-          },
-          {
-            "id": "bootup-time",
-            "title": "Reduce JavaScript execution time",
-            "detail": "2.0\u00a0s",
-            "savings_ms": null,
-            "savings_bytes": null
-          },
-          {
-            "id": "mainthread-work-breakdown",
-            "title": "Minimize main-thread work",
-            "detail": "3.9\u00a0s",
-            "savings_ms": null,
-            "savings_bytes": null
-          }
-        ]
-      },
       "desktop": {
         "opps": [
           {
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 406\u00a0KiB",
-            "savings_ms": 190,
-            "savings_bytes": 415759
+            "detail": "Est savings of 409\u00a0KiB",
+            "savings_ms": 120,
+            "savings_bytes": 419197
           },
           {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
-            "detail": "Est savings of 122\u00a0KiB",
-            "savings_ms": 110,
-            "savings_bytes": 125366
-          },
-          {
-            "id": "total-byte-weight",
-            "title": "Avoid enormous network payloads",
-            "detail": "Total size was 3,359\u00a0KiB",
-            "savings_ms": null,
-            "savings_bytes": null
+            "detail": "Est savings of 124\u00a0KiB",
+            "savings_ms": 40,
+            "savings_bytes": 126928
           },
           {
             "id": "bootup-time",
             "title": "Reduce JavaScript execution time",
-            "detail": "1.4\u00a0s",
+            "detail": "1.7\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "2.5\u00a0s",
+            "detail": "3.4\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -174,9 +114,9 @@
           {
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 407\u00a0KiB",
-            "savings_ms": 600,
-            "savings_bytes": 416280
+            "detail": "Est savings of 406\u00a0KiB",
+            "savings_ms": 810,
+            "savings_bytes": 415488
           },
           {
             "id": "unused-css-rules",
@@ -195,14 +135,14 @@
           {
             "id": "bootup-time",
             "title": "Reduce JavaScript execution time",
-            "detail": "1.9\u00a0s",
+            "detail": "2.0\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "3.8\u00a0s",
+            "detail": "4.1\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -211,37 +151,30 @@
       "desktop": {
         "opps": [
           {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "detail": "Est savings of 407\u00a0KiB",
+            "savings_ms": 120,
+            "savings_bytes": 416282
+          },
+          {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
             "detail": "Est savings of 123\u00a0KiB",
-            "savings_ms": 110,
-            "savings_bytes": 125886
-          },
-          {
-            "id": "unused-javascript",
-            "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 406\u00a0KiB",
             "savings_ms": 80,
-            "savings_bytes": 416093
+            "savings_bytes": 125896
           },
           {
             "id": "total-byte-weight",
             "title": "Avoid enormous network payloads",
-            "detail": "Total size was 3,952\u00a0KiB",
-            "savings_ms": null,
-            "savings_bytes": null
-          },
-          {
-            "id": "bootup-time",
-            "title": "Reduce JavaScript execution time",
-            "detail": "1.9\u00a0s",
+            "detail": "Total size was 3,951\u00a0KiB",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "3.7\u00a0s",
+            "detail": "2.4\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -257,15 +190,15 @@
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
             "detail": "Est savings of 600\u00a0KiB",
-            "savings_ms": 600,
-            "savings_bytes": 613890
+            "savings_ms": 1240,
+            "savings_bytes": 614851
           },
           {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
             "detail": "Est savings of 127\u00a0KiB",
             "savings_ms": 600,
-            "savings_bytes": 130512
+            "savings_bytes": 130511
           },
           {
             "id": "total-byte-weight",
@@ -277,14 +210,14 @@
           {
             "id": "bootup-time",
             "title": "Reduce JavaScript execution time",
-            "detail": "3.0\u00a0s",
+            "detail": "2.3\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "6.1\u00a0s",
+            "detail": "4.1\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -295,35 +228,35 @@
           {
             "id": "unused-javascript",
             "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 602\u00a0KiB",
-            "savings_ms": 490,
-            "savings_bytes": 616223
+            "detail": "Est savings of 597\u00a0KiB",
+            "savings_ms": 550,
+            "savings_bytes": 611247
           },
           {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
             "detail": "Est savings of 122\u00a0KiB",
-            "savings_ms": 60,
+            "savings_ms": 180,
             "savings_bytes": 125425
           },
           {
             "id": "total-byte-weight",
             "title": "Avoid enormous network payloads",
-            "detail": "Total size was 4,322\u00a0KiB",
+            "detail": "Total size was 4,321\u00a0KiB",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "bootup-time",
             "title": "Reduce JavaScript execution time",
-            "detail": "2.0\u00a0s",
+            "detail": "2.3\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "3.7\u00a0s",
+            "detail": "4.0\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -333,40 +266,79 @@
     "https://www.indriya.com/jewellery-products/indu-diamond-necklace-deaya40-apns627": {
       "label": "Indu Necklace (PDP)",
       "kind": "PDP",
-      "desktop": {
+      "mobile": {
         "opps": [
-          {
-            "id": "unused-javascript",
-            "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 603\u00a0KiB",
-            "savings_ms": 450,
-            "savings_bytes": 617584
-          },
           {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
-            "detail": "Est savings of 122\u00a0KiB",
-            "savings_ms": 80,
-            "savings_bytes": 125425
+            "detail": "Est savings of 127\u00a0KiB",
+            "savings_ms": 600,
+            "savings_bytes": 130511
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "detail": "Est savings of 600\u00a0KiB",
+            "savings_ms": 450,
+            "savings_bytes": 614800
           },
           {
             "id": "total-byte-weight",
             "title": "Avoid enormous network payloads",
-            "detail": "Total size was 3,917\u00a0KiB",
+            "detail": "Total size was 4,084\u00a0KiB",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "bootup-time",
             "title": "Reduce JavaScript execution time",
-            "detail": "1.7\u00a0s",
+            "detail": "1.8\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "3.0\u00a0s",
+            "detail": "3.5\u00a0s",
+            "savings_ms": null,
+            "savings_bytes": null
+          }
+        ]
+      },
+      "desktop": {
+        "opps": [
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "detail": "Est savings of 603\u00a0KiB",
+            "savings_ms": 590,
+            "savings_bytes": 617850
+          },
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce unused CSS",
+            "detail": "Est savings of 122\u00a0KiB",
+            "savings_ms": 280,
+            "savings_bytes": 125425
+          },
+          {
+            "id": "total-byte-weight",
+            "title": "Avoid enormous network payloads",
+            "detail": "Total size was 3,919\u00a0KiB",
+            "savings_ms": null,
+            "savings_bytes": null
+          },
+          {
+            "id": "bootup-time",
+            "title": "Reduce JavaScript execution time",
+            "detail": "2.3\u00a0s",
+            "savings_ms": null,
+            "savings_bytes": null
+          },
+          {
+            "id": "mainthread-work-breakdown",
+            "title": "Minimize main-thread work",
+            "detail": "4.7\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
@@ -379,37 +351,76 @@
       "mobile": {
         "opps": [
           {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "detail": "Est savings of 402\u00a0KiB",
+            "savings_ms": 750,
+            "savings_bytes": 411581
+          },
+          {
             "id": "unused-css-rules",
             "title": "Reduce unused CSS",
             "detail": "Est savings of 127\u00a0KiB",
             "savings_ms": 750,
-            "savings_bytes": 130163
-          },
-          {
-            "id": "unused-javascript",
-            "title": "Reduce unused JavaScript",
-            "detail": "Est savings of 402\u00a0KiB",
-            "savings_ms": 600,
-            "savings_bytes": 411936
+            "savings_bytes": 130199
           },
           {
             "id": "total-byte-weight",
             "title": "Avoid enormous network payloads",
-            "detail": "Total size was 4,974\u00a0KiB",
+            "detail": "Total size was 4,973\u00a0KiB",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "bootup-time",
             "title": "Reduce JavaScript execution time",
-            "detail": "2.4\u00a0s",
+            "detail": "3.0\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           },
           {
             "id": "mainthread-work-breakdown",
             "title": "Minimize main-thread work",
-            "detail": "5.5\u00a0s",
+            "detail": "6.4\u00a0s",
+            "savings_ms": null,
+            "savings_bytes": null
+          }
+        ]
+      },
+      "desktop": {
+        "opps": [
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce unused CSS",
+            "detail": "Est savings of 122\u00a0KiB",
+            "savings_ms": 100,
+            "savings_bytes": 125053
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "detail": "Est savings of 401\u00a0KiB",
+            "savings_ms": 0,
+            "savings_bytes": 410299
+          },
+          {
+            "id": "total-byte-weight",
+            "title": "Avoid enormous network payloads",
+            "detail": "Total size was 6,091\u00a0KiB",
+            "savings_ms": null,
+            "savings_bytes": null
+          },
+          {
+            "id": "bootup-time",
+            "title": "Reduce JavaScript execution time",
+            "detail": "3.9\u00a0s",
+            "savings_ms": null,
+            "savings_bytes": null
+          },
+          {
+            "id": "mainthread-work-breakdown",
+            "title": "Minimize main-thread work",
+            "detail": "9.1\u00a0s",
             "savings_ms": null,
             "savings_bytes": null
           }
